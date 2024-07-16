@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: "gilroy"; */
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+}
+
+#buttonComponent {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    /* transition: 0.3s; */
+    cursor: pointer;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+#buttonComponent::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    opacity: 70%;
+    background: linear-gradient(to right, rgb(65, 65, 219), rgb(211, 177, 66));
+    z-index: -1;
+    transition: 0.4s;
+}
+
+#buttonComponent:hover::before {
+    left: 0;
+}
+
+#icon {
+    opacity: 0;
+    transition: 0.4s;
+}
+
+#buttonComponent:hover #icon {
+    opacity: 1;
+}
+
+.portal {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    /* transition: 0.3s; */
+    cursor: pointer;
+    /* background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)); */
+    /* background-color: rgb(43, 44, 39); */
+    background-color: rgb(18, 17, 17);
+    /* backdrop-filter: blur(10px); */
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.portal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    opacity: 70%;
+    background: linear-gradient(to right, rgb(43, 44, 39), rgb(169, 112, 46));
+    z-index: -1;
+    transition: 0.4s;
+}
+
+.portal:hover::before {
+    left: 0;
+}
+
+#portalIcon {
+    /* opacity: 0; */
+    position: absolute;
+    top: 5%;
+    right: -10%;
+    transition: 0.4s;
+}
+
+.portal:hover #portalIcon {
+    opacity: 1;
+    right: 2%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: "gilroy"; */
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+}
+
+#buttonComponent {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    /* transition: 0.3s; */
+    cursor: pointer;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+#buttonComponent::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    opacity: 70%;
+    background: linear-gradient(to right, rgb(65, 65, 219), rgb(211, 177, 66));
+    z-index: -1;
+    transition: 0.4s;
+}
+
+#buttonComponent:hover::before {
+    left: 0;
+}
+
+#icon {
+    opacity: 0;
+    transition: 0.4s;
+}
+
+#buttonComponent:hover #icon {
+    opacity: 1;
+}
+
+.portal {
+    position: relative;
+    height: 23vh;
+    width: 25vw;
+    padding: 1vw;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 1;
+    /* transition: 0.3s; */
+    cursor: pointer;
+    /* background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)); */
+    /* background-color: rgb(43, 44, 39); */
+    background-color: rgb(18, 17, 17);
+    /* backdrop-filter: blur(10px); */
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.portal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    opacity: 70%;
+    background: linear-gradient(to right, rgb(43, 44, 39), rgb(169, 112, 46));
+    z-index: -1;
+    transition: 0.4s;
+}
+
+.portal:hover::before {
+    left: 0;
+}
+
+#portalIcon {
+    position: absolute;
+    top: 5%;
+    right: -10%;
+    transition: 0.4s;
+}
+
+.portal:hover #portalIcon {
+    opacity: 1;
+    right: 2%;
+}
