@@ -1,8 +1,14 @@
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url('./fonts/Montserrat-Regular.ttf');
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     /* font-family: "gilroy"; */
+    font-family: Montserrat-Regular;
 }
 
 html,

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ISRO - India</title>
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="shortcut icon" href="./assets/isro-logo2.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
@@ -13,62 +14,72 @@
 
 <body>
     <div id="main">
-        <div id="home" class="w-full h-screen">
-            <div id="navbar" class="w-full h-24 px-6 flex items-center justify-between">
-                <div class="part-1 flex items-center w-[20%]">
-                    <span class="inline-block border-r-[0.15vw] border-zinc-400 pr-1 mr-1">
-                        <img class="w-16" src='./assets/isro-logo2.png' alt="" />
-                    </span>
-                    <div class="">
-                        <h2 class="leading-5 text-lg">
-                            Indian Space <br>Research Organization
-                        </h2>
-                        <p class="text-zinc-400 leading-5">Department of space</p>
+        <div id="home" class="w-full h-screen relative">
+            <div id="top" class="absolute w-full h-full top-0 left-0 z-[100] pointer-events-none">
+                <div id="navbar" class="w-full h-24 px-6 flex items-center justify-between pointer-events-auto">
+                    <div class="part-1 flex items-center w-[20%]">
+                        <span class="inline-block border-r-[0.15vw] border-zinc-400 pr-1 mr-1">
+                            <img class="w-16" src='./assets/isro-logo2.png' alt="" />
+                        </span>
+                        <div class="">
+                            <h2 class="leading-5 text-lg">
+                                Indian Space <br>Research Organization
+                            </h2>
+                            <p class="text-zinc-400 leading-5">Department of space</p>
+                        </div>
+                    </div>
+                    <div class="part-2 flex items-center justify-between w-[58%]">
+                        <a href="#" class="text-lg hover:text-[#F47115]">
+                            Home
+                        </a>
+                        <a href="#" class="text-lg hover:text-[#F47115]">
+                            About<i class="ri-arrow-drop-down-line"></i>
+                        </a>
+                        <a href="#" class="text-lg hover:text-[#F47115]">
+                            Activities<i class="ri-arrow-drop-down-line"></i>
+                        </a>
+                        <a href="#" class="text-lg hover:text-[#F47115]">
+                            Services<i class="ri-arrow-drop-down-line"></i>
+                        </a>
+                        <a href="#" class="text-lg hover:text-[#F47115]">
+                            Programmes<i class="ri-arrow-drop-down-line"></i>
+                        </a>
+                        <a href="#" class="text-lg hover:text-[#F47115]">
+                            Resources<i class="ri-arrow-drop-down-line"></i>
+                        </a>
+                        <a href="#" class="text-lg hover:text-[#F47115]">
+                            Engage with US<i class="ri-arrow-drop-down-line"></i>
+                        </a>
+                    </div>
+                    <div class="part-3 w-[15%] gap-6 flex justify-end items-center">
+                        <div class="flex justify-center items-center">
+                            <i class="ri-search-line text-lg"></i>
+                            <h2 class="text-lg ml-4 pl-2 border-l-[0.15vw] border-zinc-400">
+                                En<i class="ri-arrow-drop-down-line"></i>
+                            </h2>
+                        </div>
+                        <img class="w-14" src='./assets/ashoka-stambh.png' alt="" />
                     </div>
                 </div>
-                <div class="part-2 flex items-center justify-between w-[58%]">
-                    <a href="#" class="text-lg hover:text-[#F47115]">
-                        Home
-                    </a>
-                    <a href="#" class="text-lg hover:text-[#F47115]">
-                        About<i class="ri-arrow-drop-down-line"></i>
-                    </a>
-                    <a href="#" class="text-lg hover:text-[#F47115]">
-                        Activities<i class="ri-arrow-drop-down-line"></i>
-                    </a>
-                    <a href="#" class="text-lg hover:text-[#F47115]">
-                        Services<i class="ri-arrow-drop-down-line"></i>
-                    </a>
-                    <a href="#" class="text-lg hover:text-[#F47115]">
-                        Programmes<i class="ri-arrow-drop-down-line"></i>
-                    </a>
-                    <a href="#" class="text-lg hover:text-[#F47115]">
-                        Resources<i class="ri-arrow-drop-down-line"></i>
-                    </a>
-                    <a href="#" class="text-lg hover:text-[#F47115]">
-                        Engage with US<i class="ri-arrow-drop-down-line"></i>
-                    </a>
-                </div>
-                <div class="part-3 w-[15%] gap-6 flex justify-end items-center">
-                    <div class="flex justify-center items-center">
-                        <i class="ri-search-line text-lg"></i>
-                        <h2 class="text-lg ml-4 pl-2 border-l-[0.15vw] border-zinc-400">
-                            En<i class="ri-arrow-drop-down-line"></i>
-                        </h2>
-                    </div>
-                    <img class="w-14" src='./assets/ashoka-stambh.png' alt="" />
+                <div class="centerH1 w-full h-[85vh] px-28 flex flex-col justify-center">
+                    <h4 class="text-[#F47115] text-2xl ml-1 font-semibold">
+                        Welcome to the
+                    </h4>
+                    <h1 class="text-[6vw] leading-[6vw] tracking-tight font-semibold">
+                        Indian Space
+                    </h1>
+                    <h1 class="text-[6vw] leading-[6vw] tracking-tight font-semibold">
+                        Research Organization
+                    </h1>
                 </div>
             </div>
-            <div class="centerH1 w-full h-[85vh] px-28 flex flex-col justify-center">
-                <h4 class="text-[#F47115] text-2xl ml-1 font-semibold">
-                    Welcome to the
-                </h4>
-                <h1 class="text-[6vw] leading-[6vw] tracking-tight font-semibold">
-                    Indian Space
-                </h1>
-                <h1 class="text-[6vw] leading-[6vw] tracking-tight font-semibold">
-                    Research Organization
-                </h1>
+            <div id="back" class="h-full w-full overflow-hidden">
+                <video autoplay loop muted class="h-full w-full object-cover" src="./assets/earth.mp4"></video>
+                <video autoplay loop muted class="h-full w-full object-cover" src="./assets/bhoonidhi.mp4"></video>
+                <!-- <img class="h-full w-full object-cover object-top" src="./assets/earth.jpg"
+                    alt="">
+                <img class="h-full w-full object-cover object-top" src="./assets/moon2.png" alt="">
+                <img class="h-full w-full object-cover object-top" src="./assets/moon.png" alt=""> -->
             </div>
         </div>
 
@@ -82,14 +93,22 @@
                 <div class="text-container w-[30%] h-[80%] py-4 px-2 ">
                     <h1 class="text-2xl text-center">GSLV-F14/INSAT-3DS MISSION</h1>
                     <p class="text-yellow-400 text-lg leading-none my-1 text-center">Launched on: February 17, 2024</p>
-                    <p class="text-[#F47115] text-lg leading-none mt-3 text-center">The vehicle has successfully placed the satellite into the intended geosynchronous transfer orbit.</p>
+                    <p class="text-[#F47115] text-lg leading-none mt-3 text-center">The vehicle has successfully placed
+                        the satellite into the intended geosynchronous transfer orbit.</p>
                     <h4 class="text-xl mt-3 leading-none text-zinc-200">Overview</h4>
-                    <p class="leading-5 text-zinc-400">The launch of the GSLV-F14/INSAT-3DS mission is accomplished on Saturday, February 17, 2024, at 17:30 Hrs. IST from SDSC-SHAR, Sriharikota. In its 16th mission, the GSLV aims at deploying the INSAT-3DS meteorological satellite into the Geosynchronous Transfer Orbit (GTO). Subsequent orbit-raising maneuvers will ensure that the satellite is positioned in a Geo-stationary Orbit.</p>
+                    <p class="leading-5 text-zinc-400">The launch of the GSLV-F14/INSAT-3DS mission is accomplished on
+                        Saturday, February 17, 2024, at 17:30 Hrs. IST from SDSC-SHAR, Sriharikota. In its 16th mission,
+                        the GSLV aims at deploying the INSAT-3DS meteorological satellite into the Geosynchronous
+                        Transfer Orbit (GTO). Subsequent orbit-raising maneuvers will ensure that the satellite is
+                        positioned in a Geo-stationary Orbit.</p>
                     <h4 class="text-xl mt-3 leading-none text-zinc-200">The primary objectives of the mission are:</h4>
                     <ul class="list-disc text-zinc-400">
-                        <li class="leading-none my-2 ">To monitor Earth’s surface, carry out Oceanic observations and its environment in various spectral channels of meteorological importance.</li>
-                        <li class="leading-none my-2 ">To provide the vertical profile of various meteorological parameters of the Atmosphere.</li>
-                        <li class="leading-none my-2 ">To provide the Data Collection and Data Dissemination capabilities from the Data Collection Platforms (DCPs).</li>
+                        <li class="leading-none my-2 ">To monitor Earth’s surface, carry out Oceanic observations and
+                            its environment in various spectral channels of meteorological importance.</li>
+                        <li class="leading-none my-2 ">To provide the vertical profile of various meteorological
+                            parameters of the Atmosphere.</li>
+                        <li class="leading-none my-2 ">To provide the Data Collection and Data Dissemination
+                            capabilities from the Data Collection Platforms (DCPs).</li>
                         <li class="leading-none my-2 ">To provide Satellite Aided Search and Rescue services.</li>
                     </ul>
                 </div>
@@ -102,14 +121,24 @@
                 <div class="text-container w-[30%] h-[80%] py-4 px-2 ">
                     <h1 class="text-2xl text-center">PSLV-C58/XPoSat Mission</h1>
                     <p class="text-yellow-400 text-lg leading-none my-1 text-center">Launched on: January 01, 2024</p>
-                  
+
                     <h4 class="text-xl mt-3 leading-none text-zinc-200">Overview</h4>
-                    <p class="leading-5 text-zinc-400">ISRO's PSLV-C58 has launched XPOSAT Satellite into an Eastward low inclination orbit on January 01, 2024 09:10 Hrs IST. After injection of XPOSAT, the PS4 stage will be re-started twice to reduce the orbit into 350 km circular orbit to maintain in 3-axis stabilized mode for Orbital Platform (OP) experiments. The PSLV Orbital Experimental Module-3 (POEM-3) experiment will be executed meeting the objective of 10 identified payloads, supplied by ISRO and IN-SPACe.</p>
+                    <p class="leading-5 text-zinc-400">ISRO's PSLV-C58 has launched XPOSAT Satellite into an Eastward
+                        low inclination orbit on January 01, 2024 09:10 Hrs IST. After injection of XPOSAT, the PS4
+                        stage will be re-started twice to reduce the orbit into 350 km circular orbit to maintain in
+                        3-axis stabilized mode for Orbital Platform (OP) experiments. The PSLV Orbital Experimental
+                        Module-3 (POEM-3) experiment will be executed meeting the objective of 10 identified payloads,
+                        supplied by ISRO and IN-SPACe.</p>
                     <h4 class="text-xl mt-3 leading-none text-zinc-200">The primary objectives of the mission are:</h4>
                     <ul class="list-disc text-zinc-400">
-                        <li class="leading-none my-2 ">To measure polarisation of X-rays in the energy band 8-30keV emanating from about 50 potential cosmic sources through Thomson Scattering by POLIX payload.</li>
-                        <li class="leading-none my-2 ">To carry out long term spectral and temporal studies of cosmic X-ray sources in the energy band 0.8-15keV by XSPECT payload.</li>
-                        <li class="leading-none my-2 ">To carry out polarisation and spectroscopic measurements of X-ray emissions from cosmic sources by POLIX and XSPECT payloads respectively in the common energy band.
+                        <li class="leading-none my-2 ">To measure polarisation of X-rays in the energy band 8-30keV
+                            emanating from about 50 potential cosmic sources through Thomson Scattering by POLIX
+                            payload.</li>
+                        <li class="leading-none my-2 ">To carry out long term spectral and temporal studies of cosmic
+                            X-ray sources in the energy band 0.8-15keV by XSPECT payload.</li>
+                        <li class="leading-none my-2 ">To carry out polarisation and spectroscopic measurements of X-ray
+                            emissions from cosmic sources by POLIX and XSPECT payloads respectively in the common energy
+                            band.
                         </li>
                     </ul>
                 </div>
@@ -122,14 +151,20 @@
                 <div class="text-container w-[30%] h-[80%] py-4 px-2 ">
                     <h1 class="text-2xl text-center">Gaganyaan TV-D1 Mission</h1>
                     <p class="text-yellow-400 text-lg leading-none my-1 text-center">Launched on: October 21, 2023</p>
-                    <p class="text-[#F47115] text-lg leading-none mt-3 text-center">TV D1 Test Flight is accomplished. Crew Escape System performed as intended. Mission Gaganyaan gets off on a successful note.</p>
+                    <p class="text-[#F47115] text-lg leading-none mt-3 text-center">TV D1 Test Flight is accomplished.
+                        Crew Escape System performed as intended. Mission Gaganyaan gets off on a successful note.</p>
                     <h4 class="text-xl mt-3 leading-none text-zinc-200">Overview</h4>
-                    <p class="leading-5 text-zinc-400">“In-flight Abort Demonstration of Crew Escape System (CES)” at Mach number 1.2 with the newly developed Test Vehicle followed by Crew Module separation & safe recovery.</p>
+                    <p class="leading-5 text-zinc-400">“In-flight Abort Demonstration of Crew Escape System (CES)” at
+                        Mach number 1.2 with the newly developed Test Vehicle followed by Crew Module separation & safe
+                        recovery.</p>
                     <h4 class="text-xl mt-3 leading-none text-zinc-200">The primary objectives of the mission are:</h4>
                     <ul class="list-disc text-zinc-400">
-                        <li class="leading-none my-2 ">Flight demonstration and evaluation of Test Vehicle sub systems.</li>
-                        <li class="leading-none my-2 ">Flight demonstration and evaluation of Crew Escape System including various separation systems.</li>
-                        <li class="leading-none my-2 ">Crew Module characteristics & deceleration systems demonstration at higher altitude & its recovery</li>
+                        <li class="leading-none my-2 ">Flight demonstration and evaluation of Test Vehicle sub systems.
+                        </li>
+                        <li class="leading-none my-2 ">Flight demonstration and evaluation of Crew Escape System
+                            including various separation systems.</li>
+                        <li class="leading-none my-2 ">Crew Module characteristics & deceleration systems demonstration
+                            at higher altitude & its recovery</li>
                     </ul>
                 </div>
             </div>
@@ -141,16 +176,26 @@
                 <div class="text-container w-[30%] h-[80%] py-4 px-2 ">
                     <h1 class="text-2xl text-center">PSLV-C57/Aditya-L1 Mission</h1>
                     <p class="text-yellow-400 text-lg leading-none my-1 text-center">Launched on: September 02, 2023</p>
-                    <p class="text-[#F47115] text-lg leading-none mt-3 text-center">The vehicle has successfully placed the satellite into the intended geosynchronous transfer orbit.</p>
+                    <p class="text-[#F47115] text-lg leading-none mt-3 text-center">The vehicle has successfully placed
+                        the satellite into the intended geosynchronous transfer orbit.</p>
                     <h4 class="text-xl mt-3 leading-none text-zinc-200">Overview</h4>
-                    <p class="leading-5 text-zinc-400">Aditya L1 shall be the first space based Indian mission to study the Sun. The spacecraft shall be placed in a halo orbit around the Lagrange point 1 (L1) of the Sun-Earth system, which is about 1.5 million km from the Earth. A satellite placed in the halo orbit around the L1 point has the major advantage of continuously viewing the Sun without any occultation/eclipses. This will provide a greater advantage of observing the solar activities and its effect on space weather in real time.</p>
+                    <p class="leading-5 text-zinc-400">Aditya L1 shall be the first space based Indian mission to study
+                        the Sun. The spacecraft shall be placed in a halo orbit around the Lagrange point 1 (L1) of the
+                        Sun-Earth system, which is about 1.5 million km from the Earth. A satellite placed in the halo
+                        orbit around the L1 point has the major advantage of continuously viewing the Sun without any
+                        occultation/eclipses. This will provide a greater advantage of observing the solar activities
+                        and its effect on space weather in real time.</p>
                     <h4 class="text-xl mt-3 leading-none text-zinc-200">The primary objectives of the mission are:</h4>
                     <ul class="list-disc text-zinc-400">
-                        <li class="leading-none my-2 ">Study of Solar upper atmospheric (chromosphere and corona) dynamics.</li>
-                        <li class="leading-none my-2 ">Study of chromospheric and coronal heating, physics of the partially ionized plasma, initiation of the coronal mass ejections, and flares.</li>
-                        <li class="leading-none my-2 ">Observe the in-situ particle and plasma environment providing data for the study of particle dynamics from the Sun.</li>
+                        <li class="leading-none my-2 ">Study of Solar upper atmospheric (chromosphere and corona)
+                            dynamics.</li>
+                        <li class="leading-none my-2 ">Study of chromospheric and coronal heating, physics of the
+                            partially ionized plasma, initiation of the coronal mass ejections, and flares.</li>
+                        <li class="leading-none my-2 ">Observe the in-situ particle and plasma environment providing
+                            data for the study of particle dynamics from the Sun.</li>
                         <li class="leading-none my-2 ">Physics of solar corona and its heating mechanism.</li>
-                        <li class="leading-none my-2 ">Diagnostics of the coronal and coronal loops plasma: Temperature, velocity and density.</li>
+                        <li class="leading-none my-2 ">Diagnostics of the coronal and coronal loops plasma: Temperature,
+                            velocity and density.</li>
                     </ul>
                 </div>
             </div>
@@ -234,6 +279,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
         integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+
+    <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
     <script src="script.js"></script>
 </body>
 
