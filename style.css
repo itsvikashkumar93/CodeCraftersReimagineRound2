@@ -2,6 +2,10 @@
     font-family: Montserrat-Regular;
     src: url('./fonts/Montserrat-Regular.ttf');
 }
+@font-face {
+    font-family: Teko;
+    src: url(./fonts/Teko-Light.ttf);
+}
 
 * {
     margin: 0;
@@ -116,13 +120,14 @@ body {
 }
 
 .swiper-slide h1 {
-    font-size: 35vw;
+    font-size: 40vw;
     position: absolute;
     top: -10%;
+    font-family: Teko;
     background: linear-gradient(to bottom, #908f8f 1%, transparent 99%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* letter-spacing: 10px; */
+    letter-spacing: 20px;
 }
 
 .swiper-slide h4 {
