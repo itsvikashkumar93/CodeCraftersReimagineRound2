@@ -101,7 +101,31 @@ const sheryAnimation = () => {
     });
 
 }
+
+const swiper = () => {
+    var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            dynamicBullets: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        mousewheel: {
+            forceToAxis: true,
+            releaseOnEdges: true,
+            sensitivity: 0,
+            thresholdDelta: 30,
+            thresholdTime: 0.1,
+        },
+    });
+
+}
+
 LocomotiveJs();
 landingPageChange();
 recentLaunches();
 sheryAnimation();
+swiper();
