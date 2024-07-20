@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ISRO - India</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="shortcut icon" href="./assets/isro-logo2.png" type="image/x-icon">
@@ -100,17 +101,17 @@
                     <button class="buttonComponent ml-2 rounded text-lg px-5 py-2">Explore More</button>
                 </div>
             </div>
-            <!-- <div id="back" class="h-full w-full overflow-hidden">
+            <div id="back" class="h-full w-full overflow-hidden">
                 <video autoplay loop muted class="h-full w-full object-cover" src="./assets/earth.mp4"></video>
                 <video autoplay loop muted class="h-full w-full object-cover" src="./assets/bhoonidhi.mp4"></video>
-            </div> -->
+            </div>
         </div>
 
-        <h1 class="text-6xl px-10">Recent Launches</h1>
-        <div id="recent" class="h-[100vh] w-full flex items-center justify-center gap-10 my-20">
+        <h1 class="text-6xl px-10 mt-20">Recent Launches</h1>
+        <div id="recent" class="h-[100vh] w-full flex items-center justify-center gap-10 mb-20">
             <div id="r-left" class="h-full w-[40%] overflow-hidden">
                 <div class="text-container mx-auto w-[70%] h-full flex flex-col justify-center py-4 px-2 ">
-                    <h1 class="text-2xl text-center">GSLV-F14/INSAT-3DS MISSION</h1>
+                    <h1 class="text-2xl text-center">1. GSLV-F14/INSAT-3DS MISSION</h1>
                     <p class="text-yellow-400 text-lg leading-none my-1 text-center">Launched on: February 17, 2024
                     </p>
                     <p class="text-[#F47115] text-lg leading-none mt-3 text-center">The vehicle has successfully
@@ -138,7 +139,7 @@
                     </ul>
                 </div>
                 <div class="text-container mx-auto w-[70%] h-full flex flex-col justify-center py-4 px-2 ">
-                    <h1 class="text-2xl text-center">PSLV-C58/XPoSat Mission</h1>
+                    <h1 class="text-2xl text-center">2. PSLV-C58/XPoSat Mission</h1>
                     <p class="text-yellow-400 text-lg leading-none my-1 text-center">Launched on: January 01, 2024
                     </p>
 
@@ -169,7 +170,7 @@
                     </ul>
                 </div>
                 <div class="text-container mx-auto w-[70%] h-full flex flex-col justify-center py-4 px-2 ">
-                    <h1 class="text-2xl text-center">Gaganyaan TV-D1 Mission</h1>
+                    <h1 class="text-2xl text-center">3. Gaganyaan TV-D1 Mission</h1>
                     <p class="text-yellow-400 text-lg leading-none my-1 text-center">Launched on: October 21, 2023
                     </p>
                     <p class="text-[#F47115] text-lg leading-none mt-3 text-center">TV D1 Test Flight is
@@ -196,7 +197,7 @@
                     </ul>
                 </div>
                 <div class="text-container mx-auto last-container w-[70%] h-full flex flex-col justify-center py-4 px-2 ">
-                    <h1 class="text-2xl text-center">PSLV-C57/Aditya-L1 Mission</h1>
+                    <h1 class="text-2xl text-center">4. PSLV-C57/Aditya-L1 Mission</h1>
                     <p class="text-yellow-400 text-lg leading-none my-1 text-center">Launched on: September 02, 2023
                     </p>
                     <p class="text-[#F47115] text-lg leading-none mt-3 text-center">The vehicle has successfully
@@ -231,7 +232,7 @@
                 </div>
             </div>
             <div id="r-right" class="h-full w-[35%] flex items-center justify-center overflow-hidden ">
-                <div class="img-container w-[90%] h-[90%] overflow-hidden">
+                <div class="img-container w-[90%] h-[90%] overflow-hidden ">
                     <img class="w-full h-full object-cover" src="./assets/gslvf14ind.jpg" alt="">
                     <img class="w-full h-full object-cover" src="./assets/pslvc58xposat.jpg" alt="">
                     <img class="w-full h-full object-cover" src="./assets/GaganyaanTVD1.jpg" alt="">
@@ -313,17 +314,20 @@
             </div>
         </div>
     </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
-
+    
     <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
-
+    
     <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
     <script src="script.js"></script>
 </body>

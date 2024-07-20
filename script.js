@@ -1,3 +1,28 @@
+const LocomotiveJs = () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const locoScroll = new LocomotiveScroll({
+        el: document.querySelector("#main"),
+        smooth: true
+    });
+    locoScroll.on("scroll", ScrollTrigger.update);
+
+    ScrollTrigger.scrollerProxy("#main", {
+        scrollTop(value) {
+            return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+        },
+        getBoundingClientRect() {
+            return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+        },
+        pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
+    });
+
+
+    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+
+    ScrollTrigger.refresh();
+}
+
 const landingPageChange = () => {
     var elems = document.querySelectorAll('.elem')
 
@@ -33,89 +58,35 @@ const landingPageChange = () => {
 
 }
 
-const gsapAnimation = () => {
-    gsap.timeline({
-        scrollTrigger: {
-            trigger: '#one-img',
-            start: '0% 90%',
-            end: '200% 90%',
-            // markers: true,
-            scrub: true
-        }
-    })
-        .to("#one-img", {
-            backgroundSize: '50%',
-        })
-
-    gsap.timeline({
-        scrollTrigger: {
-            trigger: '#two-img',
-            start: '0% 90%',
-            end: '200% 90%',
-            // markers: true,
-            scrub: true
-        }
-    })
-        .to("#two-img", {
-            backgroundSize: '50%',
-        })
-
-    gsap.timeline({
-        scrollTrigger: {
-            trigger: '#three-img',
-            start: '0% 90%',
-            end: '200% 90%',
-            // markers: true,
-            scrub: true
-        }
-    })
-        .to("#three-img", {
-            backgroundSize: '50%',
-        })
-
-    gsap.timeline({
-        scrollTrigger: {
-            trigger: '#four-img',
-            start: '0% 90%',
-            end: '200% 90%',
-            // markers: true,
-            scrub: true
-        }
-    })
-        .to("#four-img", {
-            backgroundSize: '50%',
-        })
-
-}
-
 const recentLaunches = () => {
     gsap.to('.text-container', {
         y: '-300%',
-        ease: Power1,
+        ease: 'linear',
         scrollTrigger: {
             trigger: '#recent',
+            scroller: "#main",
             pin: true,
             start: "top top",
             end: "bottom bottom",
             endTrigger: ".last-container",
-            scrub: 1,
+            scrub: true,
         }
     })
 
     let elems = document.querySelectorAll('.text-container');
     Shery.imageEffect('.img-container', {
         style: 4,
-        config: {onMouse: {value: 1}},
-        // debug: true,
+        config: { onMouse: { value: 1 } },
         slideStyle: (setScroll) => {
             elems.forEach((elem, index) => {
                 ScrollTrigger.create({
                     trigger: elem,
                     start: 'top top',
+                    scroller: '#main',
                     scrub: 1,
-                    onUpdate: (prog)=>{
+                    onUpdate: (prog) => {
                         console.log(prog);
-                        setScroll(prog.progress+index)
+                        setScroll(prog.progress + index)
                     }
                 })
             })
@@ -131,8 +102,7 @@ const sheryAnimation = () => {
     });
 
 }
-
-recentLaunches();
+LocomotiveJs();
 landingPageChange();
-// sheryAnimation();
-// gsapAnimation();
+recentLaunches();
+sheryAnimation();
