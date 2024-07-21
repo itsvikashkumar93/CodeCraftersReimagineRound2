@@ -15,55 +15,65 @@
 </head>
 
 <body>
+    <div id="navbar" class="w-full fixed z-[999] top-0 left-0 h-16 py-1 px-10 flex items-center justify-between ">
+        <div class="part-1 makeMagnet flex items-center w-fit select-none">
+            <span class="inline-block border-r-[0.1vw] border-zinc-400 pr-1 mr-1">
+                <img class="w-14" src='./assets/isro-logo2.png' alt="" />
+            </span>
+            <div class="text-sm leading-3">
+                <h2 class="">
+                    Indian Space <br>Research Organization
+                </h2>
+                <p class="text-zinc-400 leading-4">Department of space</p>
+            </div>
+        </div>
+
+        <div class="part-2 w-[10%] relative gap-6 flex justify-between items-center">
+            <div class="makeMagnet flex justify-center items-center select-none">
+                <i class="ri-search-line text-lg"></i>
+                <h2 class="text-lg ml-4 pl-2 border-l-[0.15vw] border-zinc-400">
+                    En<i class="ri-arrow-drop-down-line"></i>
+                </h2>
+            </div>
+            <i id="ham-open" class="ri-menu-line makeMagnet text-2xl cursor-pointer "></i>
+        </div>
+    </div>
+    <div id="hamburger"
+        class="w-[30%] h-screen  fixed z-[999999] -right-[30%] top-0 px-5 text-3xl select-none">
+        <div class="h-16 flex items-center justify-end px-3 mb-10">
+            <i id="ham-close" class="ri-close-line text-4xl cursor-pointer"></i>
+        </div>
+        <h1>Home</h1>
+        <h1>About</h1>
+        <h1>Activities</h1>
+        <h1>Services</h1>
+        <h1>Programmes</h1>
+        <h1>Resources</h1>
+        <h1>Engagements</h1>
+        <div class="flex flex-col mt-10">
+            <div class="flex items-center gap-2 h-10">
+                <i class="ri-instagram-line"></i>
+                <h2 class="text-2xl">@isro.dos</h2>
+            </div>
+            <div class="flex items-center gap-2 h-10">
+                <i class="ri-youtube-fill"></i>
+                <h2 class="text-2xl">@isroofficial5866</h2>
+            </div>
+            <div class="flex items-center gap-3 h-10">
+                <i class="ri-twitter-x-line text-2xl"></i>
+                <h2 class="text-2xl">@isro</h2>
+            </div>
+            <div class="flex items-center gap-3 h-10">
+                <i class="ri-mail-line text-2xl"></i>
+                <h2 class="text-2xl">cio@isro.gov.in</h2>
+            </div>
+
+        </div>
+    </div>
     <div id="main">
         <div id="home" class="w-full h-screen relative">
-            <div id="top" class="absolute w-full h-full top-0 left-0 z-[100] pointer-events-none">
-                <div id="navbar" class="w-full h-24 px-6 flex items-center justify-between pointer-events-auto">
-                    <div class="part-1 flex items-center w-[20%]">
-                        <span class="inline-block border-r-[0.15vw] border-zinc-400 pr-1 mr-1">
-                            <img class="w-16" src='./assets/isro-logo2.png' alt="" />
-                        </span>
-                        <div class="">
-                            <h2 class="leading-5 text-lg">
-                                Indian Space <br>Research Organization
-                            </h2>
-                            <p class="text-zinc-400 leading-5">Department of space</p>
-                        </div>
-                    </div>
-                    <div class="part-2 flex items-center justify-between w-[58%]">
-                        <a href="#" class="text-lg hover:text-[#F47115]">
-                            Home
-                        </a>
-                        <a href="#" class="text-lg hover:text-[#F47115]">
-                            About<i class="ri-arrow-drop-down-line"></i>
-                        </a>
-                        <a href="#" class="text-lg hover:text-[#F47115]">
-                            Activities<i class="ri-arrow-drop-down-line"></i>
-                        </a>
-                        <a href="#" class="text-lg hover:text-[#F47115]">
-                            Services<i class="ri-arrow-drop-down-line"></i>
-                        </a>
-                        <a href="#" class="text-lg hover:text-[#F47115]">
-                            Programmes<i class="ri-arrow-drop-down-line"></i>
-                        </a>
-                        <a href="#" class="text-lg hover:text-[#F47115]">
-                            Resources<i class="ri-arrow-drop-down-line"></i>
-                        </a>
-                        <a href="#" class="text-lg hover:text-[#F47115]">
-                            Engage with US<i class="ri-arrow-drop-down-line"></i>
-                        </a>
-                    </div>
-                    <div class="part-3 w-[15%] gap-6 flex justify-end items-center">
-                        <div class="flex justify-center items-center">
-                            <i class="ri-search-line text-lg"></i>
-                            <h2 class="text-lg ml-4 pl-2 border-l-[0.15vw] border-zinc-400">
-                                En<i class="ri-arrow-drop-down-line"></i>
-                            </h2>
-                        </div>
-                        <img class="w-14" src='./assets/ashoka-stambh.png' alt="" />
-                    </div>
-                </div>
-                <div class="centerText w-full h-[85vh] px-28 flex flex-col justify-center items-start">
+            <div id="top" class="absolute w-full h-full top-0 left-0 pointer-events-none">
+                <div class="centerText w-full mt-20 h-[85vh] px-28 flex flex-col justify-center items-start">
                     <div class="elem h-[2vw] w-full relative overflow-hidden">
                         <h1 class="text-[#F47115] text-[1.5vw] leading-[2vw] ml-1 absolute top-0 font-semibold">Welcome
                             to the</h1>
@@ -102,12 +112,13 @@
                     <button class="buttonComponent ml-2 rounded text-lg px-5 py-2">Explore More</button>
                 </div>
             </div>
-            <div id="back" class="h-full w-full overflow-hidden">
+            <div id="back" class="h-full w-full z-[10] overflow-hidden">
                 <img class="h-full w-full object-cover" src="./assets/earth.jpg"></img>
                 <img class="h-full w-full object-cover" src="./assets/Moon.jpg"></img>
                 <img class="h-full w-full object-cover" src="./assets/Mars.jpg"></img>
                 <img class="h-full w-full object-cover" src="./assets/Bhoonidhi.jpg"></img>
             </div>
+
         </div>
 
         <h1 class="text-6xl px-10 mt-20">Recent Launches</h1>

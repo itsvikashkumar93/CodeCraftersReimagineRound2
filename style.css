@@ -19,8 +19,22 @@ html,
 body {
     width: 100%;
     height: 100%;
-    background-color: #000;
+    background-color: #171616;
     color: #fff;
+}
+
+#home #top{
+    z-index: 99999 !important;
+}
+
+#navbar{
+    background-color: #ffffff00;
+    backdrop-filter: blur(10px);
+}
+
+#hamburger{
+    background-color: #ffffff25;
+    backdrop-filter: blur(10px);
 }
 
 .buttonComponent {
