@@ -151,7 +151,7 @@ const hamburger = () => {
 }
 
 hamburger();
-LocomotiveJs();
+// LocomotiveJs();
 landingPageChange();
 recentLaunches();
 sheryAnimation();
