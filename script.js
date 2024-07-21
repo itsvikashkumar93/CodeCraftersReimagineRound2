@@ -124,8 +124,8 @@ const swiper = () => {
 
 }
 
-// LocomotiveJs();
+LocomotiveJs();
 landingPageChange();
-// recentLaunches();
+recentLaunches();
 sheryAnimation();
 swiper();
