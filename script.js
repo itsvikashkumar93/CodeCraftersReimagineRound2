@@ -1,27 +1,3 @@
-// const LocomotiveJs = () => {
-//     gsap.registerPlugin(ScrollTrigger);
-
-//     const locoScroll = new LocomotiveScroll({
-//         el: document.querySelector("#main"),
-//         smooth: true
-//     });
-//     locoScroll.on("scroll", ScrollTrigger.update);
-
-//     ScrollTrigger.scrollerProxy("#main", {
-//         scrollTop(value) {
-//             return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
-//         },
-//         getBoundingClientRect() {
-//             return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
-//         },
-//         pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
-//     });
-
-
-//     ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-
-//     ScrollTrigger.refresh();
-// }
 const lenisJs = () => {
     const lenis = new Lenis({
         duration: 1.2
@@ -162,9 +138,36 @@ const hamburger = () => {
     })
 }
 
+const aboutUs = () => {
+    var para = document.querySelectorAll("#aboutContent h2");
+    para.forEach((elem) => {
+        var ptext = elem.textContent;
+        var splitted = ptext.split("");
+        var clutter = "";
+        splitted.forEach((e) => {
+            clutter += `<span>${e}</span>`;
+        })
+        elem.innerHTML = clutter;
+    })
+
+    gsap.to(".para span", {
+        color: "rgb(194, 194, 194)",
+        stagger: 0.1,
+        scrollTrigger: {
+            trigger: ".para",
+            start: "top 100%",
+            end: "top 40%",
+            scrub: 2
+        }
+    })
+
+
+}
+
 hamburger();
 lenisJs();
 landingPageChange();
 recentLaunches();
 sheryAnimation();
 swiper();
+aboutUs();

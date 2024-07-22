@@ -6,18 +6,29 @@
     font-family: Teko;
     src: url(./fonts/Teko-Light.ttf);
 }
+@font-face {
+    font-family: Equinox;
+    src: url(./fonts/Equinox-Bold.otf);
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* font-family: "gilroy"; */
     font-family: Montserrat-Regular;
 }
 
 html{
     scroll-behavior: initial;
-    /* overflow: hidden; */
+}
+
+::-webkit-scrollbar{
+    background-color: black;
+    width: 0.3vw;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgb(17, 17, 17);
 }
 
 html,
@@ -28,9 +39,6 @@ body {
     color: #fff;
 }
 
-#home #top{
-    z-index: 99999 !important;
-}
 
 #navbar{
     background-color: #ffffff00;
@@ -191,4 +199,8 @@ body {
     background-color: #F47115;
     width: 12px;
     height: 12px;
+}
+
+#aboutContent h1{
+    font-family: Equinox;
 }
