@@ -1,28 +1,40 @@
-const LocomotiveJs = () => {
-    gsap.registerPlugin(ScrollTrigger);
+// const LocomotiveJs = () => {
+//     gsap.registerPlugin(ScrollTrigger);
 
-    const locoScroll = new LocomotiveScroll({
-        el: document.querySelector("#main"),
-        smooth: true
+//     const locoScroll = new LocomotiveScroll({
+//         el: document.querySelector("#main"),
+//         smooth: true
+//     });
+//     locoScroll.on("scroll", ScrollTrigger.update);
+
+//     ScrollTrigger.scrollerProxy("#main", {
+//         scrollTop(value) {
+//             return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+//         },
+//         getBoundingClientRect() {
+//             return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+//         },
+//         pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
+//     });
+
+
+//     ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+
+//     ScrollTrigger.refresh();
+// }
+const lenisJs = () => {
+    const lenis = new Lenis({
+        duration: 1.2
     });
-    locoScroll.on("scroll", ScrollTrigger.update);
 
-    ScrollTrigger.scrollerProxy("#main", {
-        scrollTop(value) {
-            return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
-        },
-        getBoundingClientRect() {
-            return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
-        },
-        pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
-    });
+    function raf(time) {
+        lenis.raf(time);
+        ScrollTrigger.update();
+        requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
 
-
-    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-
-    ScrollTrigger.refresh();
 }
-
 const landingPageChange = () => {
     var elems = document.querySelectorAll('.elem')
 
@@ -151,7 +163,7 @@ const hamburger = () => {
 }
 
 hamburger();
-// LocomotiveJs();
+lenisJs();
 landingPageChange();
 recentLaunches();
 sheryAnimation();

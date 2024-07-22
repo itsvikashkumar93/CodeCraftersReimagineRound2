@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ISRO - India</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"> -->
     <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -38,8 +38,7 @@
             <i id="ham-open" class="ri-menu-line makeMagnet text-2xl cursor-pointer "></i>
         </div>
     </div>
-    <div id="hamburger"
-        class="w-[30%] h-screen  fixed z-[999999] -right-[30%] top-0 px-5 text-3xl select-none">
+    <div id="hamburger" class="w-[30%] h-screen  fixed z-[999999] -right-[30%] top-0 px-5 text-3xl select-none">
         <div class="h-16 flex items-center justify-end px-3 mb-10">
             <i id="ham-close" class="ri-close-line text-4xl cursor-pointer"></i>
         </div>
@@ -72,7 +71,7 @@
     </div>
     <div id="main">
         <div id="home" class="w-full h-screen relative">
-            <div id="top" class="absolute w-full h-full top-0 left-0 pointer-events-none">
+            <div id="top" class="absolute w-full h-full z-[9999] top-0 left-0 pointer-events-none">
                 <div class="centerText w-full mt-20 h-[85vh] px-28 flex flex-col justify-center items-start">
                     <div class="elem h-[2vw] w-full relative overflow-hidden">
                         <h1 class="text-[#F47115] text-[1.5vw] leading-[2vw] ml-1 absolute top-0 font-semibold">Welcome
@@ -112,7 +111,7 @@
                     <button class="buttonComponent ml-2 rounded text-lg px-5 py-2">Explore More</button>
                 </div>
             </div>
-            <div id="back" class="h-full w-full z-[10] overflow-hidden">
+            <div id="back" class="h-full w-full">
                 <img class="h-full w-full object-cover" src="./assets/earth.jpg"></img>
                 <img class="h-full w-full object-cover" src="./assets/Moon.jpg"></img>
                 <img class="h-full w-full object-cover" src="./assets/Mars.jpg"></img>
@@ -451,7 +450,8 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@0.2.28/bundled/lenis.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
         integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
@@ -459,6 +459,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
         integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
 
