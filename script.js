@@ -76,7 +76,7 @@ const recentLaunches = () => {
         ease: 'linear',
         scrollTrigger: {
             trigger: '#recent',
-            scroller: "#main",
+            // scroller: "#main",
             pin: true,
             start: "top top",
             end: "bottom bottom",
@@ -94,7 +94,7 @@ const recentLaunches = () => {
                 ScrollTrigger.create({
                     trigger: elem,
                     start: 'top top',
-                    scroller: '#main',
+                    // scroller: '#main',
                     scrub: 1,
                     onUpdate: (prog) => {
                         setScroll(prog.progress + index)
