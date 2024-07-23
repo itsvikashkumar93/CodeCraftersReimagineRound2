@@ -192,8 +192,6 @@ const launcherPage = () => {
     var tl = gsap.timeline({
         scrollTrigger: {
             trigger: "#launcherPage",
-            // scroller: "body",
-            // markers: true,
             start: "top top",
             end: "top -200%",
             scrub: true,
@@ -222,7 +220,6 @@ const launcherPage = () => {
             delay: .1,
             scrub: true,
             pin: true,
-            // markers: true
         }
     });
 
@@ -307,11 +304,24 @@ const launcherPage = () => {
 
 };
 
+const handleNavbar = () => {
+    gsap.to('#navbar', {
+        y: -60,
+        scrollTrigger: {
+            trigger: '#home',
+            start: 'bottom 100%',
+            end: 'bottom 90%',
+            scrub: 1,
+        }
+    })
+}
+
 
 lenisJs();
 swiper();
 
 if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    handleNavbar();
     landingPageChange();
     recentLaunches();
     sheryAnimation();

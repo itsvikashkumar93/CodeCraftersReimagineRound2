@@ -15,8 +15,31 @@
 </head>
 
 <body>
+    <div id="navbar" class="w-full fixed top-0 left-0 z-[9999] h-16 py-1 sm:px-10 px-4 flex items-center pointer-events-auto justify-between">
+        <div class="part-1 makeMagnet flex items-center w-fit select-none">
+            <span class="inline-block border-r-[0.1vw] border-zinc-400 pr-1 mr-1">
+                <img class="w-10 sm:w-14" src='./assets/isro-logo2.png' alt="" />
+            </span>
+            <div class="hidden sm:block text-sm leading-3">
+                <h2 class="">
+                    Indian Space <br>Research Organization
+                </h2>
+                <p class="text-zinc-400 leading-4">Department of space</p>
+            </div>
+        </div>
+
+        <div class="part-2 sm:w-[10%] relative gap-6 flex justify-between items-center">
+            <div class="makeMagnet hidden sm:flex justify-center items-center select-none">
+                <i class="ri-search-line text-lg"></i>
+                <h2 class="text-lg ml-4 pl-2 border-l-[0.15vw] border-zinc-400">
+                    En<i class="ri-arrow-drop-down-line"></i>
+                </h2>
+            </div>
+            <i id="ham-open" class="ri-menu-line makeMagnet text-2xl cursor-pointer "></i>
+        </div>
+    </div>
     <div id="hamburger"
-        class="w-full sm:w-[30%] h-screen fixed z-[999999] sm:-right-[30%] top-0 pl-5 sm:px-5 text-3xl select-none">
+        class="w-full sm:w-[30%] h-screen fixed z-[9999] sm:-right-[30%] top-0 pl-5 sm:px-5 text-3xl select-none">
         <div class="h-16 flex items-center justify-end px-3 mb-10">
             <i id="ham-close" class="ri-close-line text-4xl cursor-pointer"></i>
         </div>
@@ -48,33 +71,9 @@
         </div>
     </div>
     <div id="main">
-        <div id="home" class="w-full h-[50vh] sm:h-screen overflow-hidden  relative">
-            <div id="top" class="absolute w-full h-[45vh] sm:h-full z-[9999] top-0 left-0 pointer-events-none">
-                <div id="navbar"
-                    class="w-full h-16 py-1 sm:px-10 px-4 flex items-center pointer-events-auto justify-between">
-                    <div class="part-1 makeMagnet flex items-center w-fit select-none">
-                        <span class="inline-block border-r-[0.1vw] border-zinc-400 pr-1 mr-1">
-                            <img class="w-10 sm:w-14" src='./assets/isro-logo2.png' alt="" />
-                        </span>
-                        <div class="hidden sm:block text-sm leading-3">
-                            <h2 class="">
-                                Indian Space <br>Research Organization
-                            </h2>
-                            <p class="text-zinc-400 leading-4">Department of space</p>
-                        </div>
-                    </div>
-
-                    <div class="part-2 sm:w-[10%] relative gap-6 flex justify-between items-center">
-                        <div class="makeMagnet hidden sm:flex justify-center items-center select-none">
-                            <i class="ri-search-line text-lg"></i>
-                            <h2 class="text-lg ml-4 pl-2 border-l-[0.15vw] border-zinc-400">
-                                En<i class="ri-arrow-drop-down-line"></i>
-                            </h2>
-                        </div>
-                        <i id="ham-open" class="ri-menu-line makeMagnet text-2xl cursor-pointer "></i>
-                    </div>
-                </div>
-                <div class="centerText hidden w-full mt-16 h-[85vh] px-28 sm:flex flex-col justify-center items-start">
+        <div id="home" class="w-full h-[50vh] sm:h-screen overflow-hidden relative">
+            <div id="top" class="absolute w-full h-[45vh] sm:h-full z-[999] top-0 left-0 pointer-events-none">
+                <div class="centerText hidden w-full mt-24 h-[85vh] px-28 sm:flex flex-col justify-center items-start">
                     <div class="elem h-[2vw] w-full relative overflow-hidden">
                         <h1 class="text-[#F47115] text-[1.5vw] leading-[2vw] ml-1 absolute top-0 font-semibold">Welcome
                             to the</h1>
@@ -132,42 +131,57 @@
         </div>
 
         <h1 class="sm:text-6xl text-4xl px-4 sm:px-10 mt-5 sm:mt-20">Recent Launches</h1>
-        <div id="recent" class="hidden h-[100vh] w-full sm:flex items-center justify-center gap-10 ">
+        <div id="recent" class="relative hidden h-screen w-full sm:flex items-center justify-center gap-10 ">
             <div id="r-left" class="h-full w-[40%] overflow-hidden">
                 <div class="text-container mx-auto w-[90%] h-full flex flex-col justify-center py-4 px-2 ">
                     <h1 class="text-3xl text-center">1. GSLV-F14/INSAT-3DS MISSION</h1>
                     <p class="text-yellow-400 text-lg leading-none my-1 text-center">Launched on: February 17, 2024</p>
-                    <p class="text-[#F47115] text-lg leading-none mt-3 text-center">The vehicle has successfully placed
-                        the satellite into the intended geosynchronous transfer orbit.</p>
-                    <p class="leading-5 text-zinc-400 text-center mt-2">The launch of the GSLV-F14/INSAT-3DS mission is
-                        accomplished
-                        on
-                        Saturday, February 17, 2024, at 17:30 Hrs. IST from SDSC-SHAR, Sriharikota.</p>
+                    <ul>
+                        <li class="text-lg list-disc text-center text-zinc-400 leading-none mt-3">The vehicle has
+                            successfully placed
+                            the satellite into the intended geosynchronous transfer orbit.</li>
+                        <li class="leading-5 list-disc text-center text-zinc-400 mt-2">The launch of the
+                            GSLV-F14/INSAT-3DS mission
+                            is
+                            accomplished
+                            on
+                            Saturday, February 17, 2024, at 17:30 Hrs. IST from SDSC-SHAR, Sriharikota.</li>
+                    </ul>
                 </div>
                 <div class="text-container mx-auto w-[90%] h-full flex flex-col justify-center py-4 px-2 ">
                     <h1 class="text-3xl text-center">2. PSLV-C58/XPoSat Mission</h1>
                     <p class="text-yellow-400 text-lg leading-none my-1 text-center">Launched on: January 01, 2024
                     </p>
-                    <p class="leading-5 text-zinc-400 mt-2 text-center">ISRO's PSLV-C58 has launched XPOSAT Satellite
-                        into an
-                        Eastward
-                        low inclination orbit on January 01, 2024 09:10 Hrs IST.</p>
+                    <ul>
+                        <li class="leading-5 list-disc text-center text-zinc-400 mt-2">ISRO's PSLV-C58 has launched
+                            XPOSAT Satellite
+                            into an
+                            Eastward
+                            low inclination orbit on January 01, 2024 09:10 Hrs IST.</li>
+                        <li class="leading-5 list-disc text-center text-zinc-400 mt-2">After injection of XPOSAT, the
+                            PS4
+                            stage will be re-started twice to reduce the orbit into 350 km circular orbit to maintain in
+                            3-axis stabilized mode for Orbital Platform (OP) experiments.</li>
+                    </ul>
 
                 </div>
                 <div class="text-container mx-auto w-[90%] h-full flex flex-col justify-center py-4 px-2 ">
                     <h1 class="text-3xl text-center">3. Gaganyaan TV-D1 Mission</h1>
                     <p class="text-yellow-400 text-lg leading-none my-1 text-center">Launched on: October 21, 2023
                     </p>
-                    <p class="text-[#F47115] text-lg leading-none mt-3 text-center">TV D1 Test Flight is
-                        accomplished.
-                        Crew Escape System performed as intended. Mission Gaganyaan gets off on a successful note.
-                    </p>
-                    <p class="leading-5 text-zinc-400 text-center mt-2">“In-flight Abort Demonstration of Crew Escape
-                        System (CES)”
-                        at
-                        Mach number 1.2 with the newly developed Test Vehicle followed by Crew Module separation &
-                        safe
-                        recovery.</p>
+                    <ul>
+                        <li class="text-lg list-disc text-center text-zinc-400 leading-none mt-3">TV D1 Test Flight is
+                            accomplished.
+                            Crew Escape System performed as intended. Mission Gaganyaan gets off on a successful note.
+                        </li>
+                        <li class="leading-5 list-disc text-center text-zinc-400 mt-2">“In-flight Abort Demonstration of
+                            Crew Escape
+                            System (CES)”
+                            at
+                            Mach number 1.2 with the newly developed Test Vehicle followed by Crew Module separation &
+                            safe
+                            recovery.</li>
+                    </ul>
 
                 </div>
                 <div
@@ -175,16 +189,20 @@
                     <h1 class="text-3xl text-center">4. PSLV-C57/Aditya-L1 Mission</h1>
                     <p class="text-yellow-400 text-lg leading-none my-1 text-center">Launched on: September 02, 2023
                     </p>
-                    <p class="text-[#F47115] text-lg leading-none mt-3 text-center">The vehicle has successfully
-                        placed
-                        the satellite into the intended geosynchronous transfer orbit.</p>
+                    <ul>
+                        <li class="text-lg list-disc text-center text-zinc-400 leading-none mt-3">The vehicle has
+                            successfully
+                            placed
+                            the satellite into the intended geosynchronous transfer orbit.</li>
 
-                    <p class="leading-5 text-zinc-400 text-center mt-2">Aditya L1 shall be the first space based Indian
-                        mission to
-                        study
-                        the Sun. The spacecraft shall be placed in a halo orbit around the Lagrange point 1 (L1) of
-                        the
-                        Sun-Earth system.</p>
+                        <li class="leading-5 list-disc text-center text-zinc-400 mt-2">Aditya L1 shall be the first
+                            space based Indian
+                            mission to
+                            study
+                            the Sun. The spacecraft shall be placed in a halo orbit around the Lagrange point 1 (L1) of
+                            the
+                            Sun-Earth system.</li>
+                    </ul>
                 </div>
             </div>
             <div id="r-right" class="h-full w-[35%] flex items-center justify-center overflow-hidden ">
@@ -229,7 +247,7 @@
             </div>
         </div>
 
-        <div id="Swiper-slider" class="sm:h-screen h-[40vh] w-full flex items-center">
+        <div id="Swiper-slider" class="relative sm:h-screen h-[40vh] w-full flex items-center">
             <div class="swiper mySwiper h-[90%] w-[90%] rounded-md ">
                 <div class="swiper-wrapper h-full w-full">
                     <div class="swiper-slide">
@@ -350,7 +368,7 @@
             </div>
         </div>
 
-        <div id="portals" class="w-full sm:h-screen h-fit px-4 sm:px-8 py-5">
+        <div id="portals" class="relative w-full sm:h-screen h-fit px-4 sm:px-8 py-5">
             <h1 class="text-5xl sm:px-28 font-semibold">ISRO Portals</h1>
             <h5 class="text-lg sm:px-28 mt-1">
                 Links to all the ISRO Portals in one place
@@ -427,7 +445,7 @@
             </div>
         </div>
 
-        <div id="launcherPage" class="mt-10">
+        <div id="launcherPage" class="relative mt-10">
             <div id="upper">
                 <h1 id="h1">LAUNCHERS</h1>
             </div>
@@ -497,13 +515,12 @@
             </div>
         </div>
 
-        <div id="about" class='h-[65vh] sm:h-screen w-full relative text-zinc-300 sm:text-zinc-700'>
-            <video class='absolute hidden sm:block h-full top-0 left-[-35%]' src="Video/bg1.mp4" type='video' autoPlay
-                loop muted>
-            </video>
+        <div id="about" class='h-[65vh] sm:h-[105vh] w-full relative text-zinc-300 overflow-hidden sm:text-zinc-700'>
+            <img class='sm:block h-full w-full object-cover object-right' src="./assets/moon.png">
+            </img>
 
             <div id="aboutContent"
-                class="absolute w-full h-fit sm:w-[60%] top-[50%] right-0 -translate-y-[50%] px-4 sm:px-0">
+                class="absolute w-full h-fit sm:w-[60%] top-[50%] -right-10 -translate-y-[50%] px-4 sm:px-0">
                 <h1 class='sm:text-6xl text-4xl text-zinc-400 font-medium text-white'>About ISRO</h1>
                 <h2 class="para leading-none sm:leading-normal mt-2 sm:mt-6 text-xl">Indian Space Research Organisation
                     (ISRO) is the space agency of
@@ -540,7 +557,7 @@
             </div>
 
         </div>
-        <div id="footer" class="relative sm:min-h-screen h-fit bg-black sm:overflow-hidden w-full">
+        <div id="footer" class="sm:min-h-screen h-fit sm:overflow-hidden w-full">
             <div id="logo" class="flex justify-center items-center mt-10 mb-5">
                 <img class="h-20 sm:h-[20vh]" src="./assets/logo.png" alt="">
             </div>
