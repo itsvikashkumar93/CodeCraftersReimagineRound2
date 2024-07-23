@@ -343,7 +343,7 @@ function pg4() {
                 document.getElementById(contentId).classList.add('active');
 
                 if (width >= 1000) {
-                    scroller.style.top = `${index * 3.2}vw`;
+                    scroller.style.top = `${index * 3.5}vw`;
                     scroller.style.height = `${tabs[index].offsetHeight}px`;
                 } else {
                     scroller.style.top = `${index * 3.5}vh`;
