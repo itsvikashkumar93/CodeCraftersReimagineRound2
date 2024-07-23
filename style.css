@@ -37,7 +37,8 @@ html,
 body {
     width: 100%;
     min-height: 100%;
-    background-color: #171616;
+    /* background-color: #020C44; */
+    background: linear-gradient(90deg, rgb(15 10 20) 15%, rgb(72 37 83) 50%, rgb(46, 68, 139) 91%);
     color: #fff;
 }
 
@@ -104,8 +105,8 @@ body {
     overflow: hidden;
     z-index: 1;
     cursor: pointer;
-    background-color: rgb(18, 17, 17);
-    /* backdrop-filter: blur(10px); */
+    /* background-color: rgb(18, 17, 17); */
+    backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
