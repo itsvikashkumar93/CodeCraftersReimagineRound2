@@ -15,30 +15,8 @@
 </head>
 
 <body>
-    <div id="navbar" class="w-full fixed z-[999] top-0 left-0 h-16 py-1 px-10 flex items-center justify-between ">
-        <div class="part-1 makeMagnet flex items-center w-fit select-none">
-            <span class="inline-block border-r-[0.1vw] border-zinc-400 pr-1 mr-1">
-                <img class="w-14" src='./assets/isro-logo2.png' alt="" />
-            </span>
-            <div class="text-sm leading-3">
-                <h2 class="">
-                    Indian Space <br>Research Organization
-                </h2>
-                <p class="text-zinc-400 leading-4">Department of space</p>
-            </div>
-        </div>
-
-        <div class="part-2 w-[10%] relative gap-6 flex justify-between items-center">
-            <div class="makeMagnet flex justify-center items-center select-none">
-                <i class="ri-search-line text-lg"></i>
-                <h2 class="text-lg ml-4 pl-2 border-l-[0.15vw] border-zinc-400">
-                    En<i class="ri-arrow-drop-down-line"></i>
-                </h2>
-            </div>
-            <i id="ham-open" class="ri-menu-line makeMagnet text-2xl cursor-pointer "></i>
-        </div>
-    </div>
-    <div id="hamburger" class="w-[30%] h-screen  fixed z-[999999] -right-[30%] top-0 px-5 text-3xl select-none">
+    <div id="hamburger"
+        class="w-full sm:w-[30%] h-screen fixed z-[999999] sm:-right-[30%] top-0 pl-5 sm:px-5 text-3xl select-none">
         <div class="h-16 flex items-center justify-end px-3 mb-10">
             <i id="ham-close" class="ri-close-line text-4xl cursor-pointer"></i>
         </div>
@@ -70,9 +48,33 @@
         </div>
     </div>
     <div id="main">
-        <div id="home" class="w-full h-screen relative">
-            <div id="top" class="absolute w-full h-full z-[9999] top-0 left-0 pointer-events-none">
-                <div class="centerText w-full mt-20 h-[85vh] px-28 flex flex-col justify-center items-start">
+        <div id="home" class="w-full h-[50vh] sm:h-screen overflow-hidden  relative">
+            <div id="top" class="absolute w-full h-[45vh] sm:h-full z-[9999] top-0 left-0 pointer-events-none">
+                <div id="navbar"
+                    class="w-full h-16 py-1 sm:px-10 px-4 flex items-center pointer-events-auto justify-between">
+                    <div class="part-1 makeMagnet flex items-center w-fit select-none">
+                        <span class="inline-block border-r-[0.1vw] border-zinc-400 pr-1 mr-1">
+                            <img class="w-10 sm:w-14" src='./assets/isro-logo2.png' alt="" />
+                        </span>
+                        <div class="hidden sm:block text-sm leading-3">
+                            <h2 class="">
+                                Indian Space <br>Research Organization
+                            </h2>
+                            <p class="text-zinc-400 leading-4">Department of space</p>
+                        </div>
+                    </div>
+
+                    <div class="part-2 sm:w-[10%] relative gap-6 flex justify-between items-center">
+                        <div class="makeMagnet hidden sm:flex justify-center items-center select-none">
+                            <i class="ri-search-line text-lg"></i>
+                            <h2 class="text-lg ml-4 pl-2 border-l-[0.15vw] border-zinc-400">
+                                En<i class="ri-arrow-drop-down-line"></i>
+                            </h2>
+                        </div>
+                        <i id="ham-open" class="ri-menu-line makeMagnet text-2xl cursor-pointer "></i>
+                    </div>
+                </div>
+                <div class="centerText hidden w-full mt-16 h-[85vh] px-28 sm:flex flex-col justify-center items-start">
                     <div class="elem h-[2vw] w-full relative overflow-hidden">
                         <h1 class="text-[#F47115] text-[1.5vw] leading-[2vw] ml-1 absolute top-0 font-semibold">Welcome
                             to the</h1>
@@ -110,28 +112,46 @@
 
                     <button class="buttonComponent ml-2 rounded text-lg px-5 py-2">Explore More</button>
                 </div>
+                <div class="centerForMobile sm:hidden w-full h-full px-4 py-5 flex flex-col justify-end items-start">
+                    <h1 class="text-[#F47115] text-lg leading-none font-semibold">Welcome to
+                        the</h1>
+                    <h1 class="text-3xl leading-none tracking-tight font-semibold">Indian Space</h1>
+                    <h1 class="text-3xl leading-none tracking-tight font-semibold">Research
+                        Organization</h1>
+                    <button class="buttonComponent mt-2 rounded text-lg px-5 py-2">Explore More</button>
+
+                </div>
             </div>
             <div id="back" class="h-full w-full">
                 <img class="h-full w-full object-cover" src="./assets/earth.jpg"></img>
-                <img class="h-full w-full object-cover" src="./assets/Moon.jpg"></img>
-                <img class="h-full w-full object-cover" src="./assets/Mars.jpg"></img>
-                <img class="h-full w-full object-cover" src="./assets/Bhoonidhi.jpg"></img>
+                <img class="h-full w-full hidden sm:block object-cover" src="./assets/Moon.jpg"></img>
+                <img class="h-full w-full hidden sm:block object-cover" src="./assets/Mars.jpg"></img>
+                <img class="h-full w-full hidden sm:block object-cover" src="./assets/Bhoonidhi.jpg"></img>
             </div>
 
         </div>
 
-        <h1 class="text-6xl px-10 mt-20">Recent Launches</h1>
-        <div id="recent" class="h-[100vh] w-full flex items-center justify-center gap-10 mb-20">
+        <h1 class="sm:text-6xl text-4xl px-4 sm:px-10 mt-5 sm:mt-20">Recent Launches</h1>
+        <div id="recent" class="hidden h-[100vh] w-full sm:flex items-center justify-center gap-10 ">
             <div id="r-left" class="h-full w-[40%] overflow-hidden">
                 <div class="text-container mx-auto w-[90%] h-full flex flex-col justify-center py-4 px-2 ">
                     <h1 class="text-3xl text-center">1. GSLV-F14/INSAT-3DS MISSION</h1>
                     <p class="text-yellow-400 text-lg leading-none my-1 text-center">Launched on: February 17, 2024</p>
-                    <p class="text-[#F47115] text-lg leading-none mt-3 text-center">The vehicle has successfully placed the satellite into the intended geosynchronous transfer orbit.</p>    
+                    <p class="text-[#F47115] text-lg leading-none mt-3 text-center">The vehicle has successfully placed
+                        the satellite into the intended geosynchronous transfer orbit.</p>
+                    <p class="leading-5 text-zinc-400 text-center mt-2">The launch of the GSLV-F14/INSAT-3DS mission is
+                        accomplished
+                        on
+                        Saturday, February 17, 2024, at 17:30 Hrs. IST from SDSC-SHAR, Sriharikota.</p>
                 </div>
                 <div class="text-container mx-auto w-[90%] h-full flex flex-col justify-center py-4 px-2 ">
                     <h1 class="text-3xl text-center">2. PSLV-C58/XPoSat Mission</h1>
                     <p class="text-yellow-400 text-lg leading-none my-1 text-center">Launched on: January 01, 2024
                     </p>
+                    <p class="leading-5 text-zinc-400 mt-2 text-center">ISRO's PSLV-C58 has launched XPOSAT Satellite
+                        into an
+                        Eastward
+                        low inclination orbit on January 01, 2024 09:10 Hrs IST.</p>
 
                 </div>
                 <div class="text-container mx-auto w-[90%] h-full flex flex-col justify-center py-4 px-2 ">
@@ -142,7 +162,13 @@
                         accomplished.
                         Crew Escape System performed as intended. Mission Gaganyaan gets off on a successful note.
                     </p>
-                
+                    <p class="leading-5 text-zinc-400 text-center mt-2">“In-flight Abort Demonstration of Crew Escape
+                        System (CES)”
+                        at
+                        Mach number 1.2 with the newly developed Test Vehicle followed by Crew Module separation &
+                        safe
+                        recovery.</p>
+
                 </div>
                 <div
                     class="text-container mx-auto last-container w-[90%] h-full flex flex-col justify-center py-4 px-2 ">
@@ -152,7 +178,13 @@
                     <p class="text-[#F47115] text-lg leading-none mt-3 text-center">The vehicle has successfully
                         placed
                         the satellite into the intended geosynchronous transfer orbit.</p>
-                  
+
+                    <p class="leading-5 text-zinc-400 text-center mt-2">Aditya L1 shall be the first space based Indian
+                        mission to
+                        study
+                        the Sun. The spacecraft shall be placed in a halo orbit around the Lagrange point 1 (L1) of
+                        the
+                        Sun-Earth system.</p>
                 </div>
             </div>
             <div id="r-right" class="h-full w-[35%] flex items-center justify-center overflow-hidden ">
@@ -166,7 +198,38 @@
 
         </div>
 
-        <div id="Swiper-slider" class="h-screen w-full flex items-center">
+        <div id="recentForMobile" class="sm:hidden">
+            <div class="recentCont mt-5">
+                <h1 class="text-xl text-center leading-none">1. GSLV-F14/INSAT-3DS MISSION</h1>
+                <p class="text-yellow-400 leading-none my-1 text-center">Launched on: February 17, 2024</p>
+                <div class="h-[50vh] w-full px-4 mt-3">
+                    <img class="w-full h-full object-cover" src="./assets/gslvf14ind.jpg" alt="">
+                </div>
+            </div>
+            <div class="recentCont mt-8">
+                <h1 class="text-xl text-center leading-none">2. PSLV-C58/XPoSat Mission</h1>
+                <p class="text-yellow-400 leading-none my-1 text-center">Launched on: January 01, 2024</p>
+                <div class="h-[50vh] w-full px-4 mt-3">
+                    <img class="w-full h-full object-cover" src="./assets/pslvc58xposat.jpg" alt="">
+                </div>
+            </div>
+            <div class="recentCont mt-8">
+                <h1 class="text-xl text-center leading-none">3. Gaganyaan TV-D1 Mission</h1>
+                <p class="text-yellow-400 leading-none my-1 text-center">Launched on: October 21, 2023</p>
+                <div class="h-[50vh] w-full px-4 mt-3">
+                    <img class="w-full h-full object-cover" src="./assets/GaganyaanTVD1.jpg" alt="">
+                </div>
+            </div>
+            <div class="recentCont mt-8">
+                <h1 class="text-xl text-center leading-none">4. PSLV-C57/Aditya-L1 Mission</h1>
+                <p class="text-yellow-400 leading-none my-1 text-center">Launched on: September 02, 2023</p>
+                <div class="h-[50vh] w-full px-4 mt-3">
+                    <img class="w-full h-full object-cover" src="./assets/PSLVC56_PostImg.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div id="Swiper-slider" class="sm:h-screen h-[40vh] w-full flex items-center">
             <div class="swiper mySwiper h-[90%] w-[90%] rounded-md ">
                 <div class="swiper-wrapper h-full w-full">
                     <div class="swiper-slide">
@@ -221,7 +284,7 @@
                     </div>
                     <div class="swiper-slide">
                         <h1>1994</h1>
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsACyIBYQuUoBJu9mTfozfXohZlvbL-6Qr7Q&s"
+                        <img src="https://encrypted-tbn0.gstatic.com/assets?q=tbn:ANd9GcTsACyIBYQuUoBJu9mTfozfXohZlvbL-6Qr7Q&s"
                             alt="" srcset="" />
                         <h4>15 October 1994</h4>
                         <p>
@@ -244,7 +307,7 @@
                     </div>
                     <div class="swiper-slide">
                         <h1>2017</h1>
-                        <img src="https://indembassyseoul.gov.in/sites/default/files/inline-images/1532943928_3_0.jpg"
+                        <img src="https://indembassyseoul.gov.in/sites/default/files/inline-assets/1532943928_3_0.jpg"
                             alt="" srcset="" />
                         <h4>15 February 2017</h4>
                         <p>
@@ -287,191 +350,265 @@
             </div>
         </div>
 
-        <div id="portals" class="w-full h-screen px-8 py-5">
-            <h1 class="text-5xl px-28 font-semibold">ISRO Portals</h1>
-            <h5 class="text-lg px-28 mt-1">
+        <div id="portals" class="w-full sm:h-screen h-fit px-4 sm:px-8 py-5">
+            <h1 class="text-5xl sm:px-28 font-semibold">ISRO Portals</h1>
+            <h5 class="text-lg sm:px-28 mt-1">
                 Links to all the ISRO Portals in one place
             </h5>
-            <div class="flex mt-10 items-center flex-wrap shrink-0 gap-10 justify-center">
+            <div class="flex mt-5 sm:mt-10 items-center flex-wrap shrink-0 gap-5 sm:gap-10 justify-center">
                 <div class="portal">
                     <img src='https://www.isro.gov.in/media_isro/image/hormenu/spark.png.webp'
-                        class="h-14 w-14 rounded-md object-cover object-center" alt="" />
-                    <h1 class="text-2xl mt-3 mb-2 leading-none">SPARK</h1>
-                    <p class="text-base leading-5 ">ISRO Virtual Space Museum</p>
+                        class="h-12 w-12 sm:h-14 sm:w-14 rounded-md object-cover object-center" alt="" />
+                    <h1 class="sm:text-2xl text-xl mt-1 mb-0 sm:mt-3 sm:mb-2 leading-none">SPARK</h1>
+                    <p class="sm:text-base text-sm leading-none sm:leading-5 ">ISRO Virtual Space Museum</p>
                     <i id="portalIcon" class="ri-arrow-right-circle-fill text-3xl inline-block -rotate-[30deg]"></i>
                 </div>
                 <div class="portal">
                     <img src='https://www.isro.gov.in/media_isro/image/hormenu/vedas.png.webp'
-                        class="h-14 w-14 rounded-md object-cover object-center" alt="" />
-                    <h1 class="text-2xl mt-3 mb-2 leading-none">VEDAS</h1>
-                    <p class="text-base leading-5 ">Visualisation of Earth Observation Data and Archival System</p>
+                        class="h-12 w-12 sm:h-14 sm:w-14 rounded-md object-cover object-center" alt="" />
+                    <h1 class="sm:text-2xl text-xl mt-1 mb-0 sm:mt-3 sm:mb-2 leading-none">VEDAS</h1>
+                    <p class="sm:text-base text-sm leading-none sm:leading-5 ">Visualisation of Earth Observation Data
+                        and Archival System</p>
                     <i id="portalIcon" class="ri-arrow-right-circle-fill text-3xl inline-block -rotate-[30deg]"></i>
                 </div>
                 <div class="portal">
                     <img src='https://www.isro.gov.in/media_isro/image/hormenu/bhoonidhi.png.webp'
-                        class="h-14 w-14 rounded-md object-cover object-center" alt="" />
-                    <h1 class="text-2xl mt-3 mb-2 leading-none">Bhoonidhi</h1>
-                    <p class="text-base leading-5 ">Earth Observation Data Hub</p>
+                        class="h-12 w-12 sm:h-14 sm:w-14 rounded-md object-cover object-center" alt="" />
+                    <h1 class="sm:text-2xl text-xl mt-1 mb-0 sm:mt-3 sm:mb-2 leading-none">Bhoonidhi</h1>
+                    <p class="sm:text-base text-sm leading-none sm:leading-5 ">Earth Observation Data Hub</p>
                     <i id="portalIcon" class="ri-arrow-right-circle-fill text-3xl inline-block -rotate-[30deg]"></i>
                 </div>
                 <div class="portal">
                     <img src='https://www.isro.gov.in/media_isro/image/hormenu/igrasp.png.webp'
-                        class="h-14 w-14 rounded-md object-cover object-center" alt="" />
-                    <h1 class="text-2xl mt-3 mb-2 leading-none">I-Grasp</h1>
-                    <p class="text-base leading-5 ">ISRO's Grant In Aid Space Research Programmes</p>
+                        class="h-12 w-12 sm:h-14 sm:w-14 rounded-md object-cover object-center" alt="" />
+                    <h1 class="sm:text-2xl text-xl mt-1 mb-0 sm:mt-3 sm:mb-2 leading-none">I-Grasp</h1>
+                    <p class="sm:text-base text-sm leading-none sm:leading-5 ">ISRO's Grant In Aid Space Research
+                        Programmes</p>
                     <i id="portalIcon" class="ri-arrow-right-circle-fill text-3xl inline-block -rotate-[30deg]"></i>
                 </div>
                 <div class="portal">
                     <img src='https://www.isro.gov.in/media_isro/image/hormenu/stem.png.webp'
-                        class="h-14 w-14 rounded-md object-cover object-center" alt="" />
-                    <h1 class="text-2xl mt-3 mb-2 leading-none">ISRO STEM</h1>
-                    <p class="text-base leading-5 ">ISRO Science Technology Engineering & Mathematics Programme</p>
+                        class="h-12 w-12 sm:h-14 sm:w-14 rounded-md object-cover object-center" alt="" />
+                    <h1 class="sm:text-2xl text-xl mt-1 mb-0 sm:mt-3 sm:mb-2 leading-none">ISRO STEM</h1>
+                    <p class="sm:text-base text-sm leading-none sm:leading-5 ">ISRO Science Technology Engineering &
+                        Mathematics Programme</p>
                     <i id="portalIcon" class="ri-arrow-right-circle-fill text-3xl inline-block -rotate-[30deg]"></i>
                 </div>
                 <div class="portal">
                     <img src='https://www.isro.gov.in/media_isro/image/hormenu/mosdac.jpg.webp'
-                        class="h-14 w-14 rounded-md object-cover object-center" alt="" />
-                    <h1 class="text-2xl mt-3 mb-2 leading-none">MOSDAC</h1>
-                    <p class="text-base leading-5 ">Meteorological & Oceanographic Satellite Data Archival Centre</p>
+                        class="h-12 w-12 sm:h-14 sm:w-14 rounded-md object-cover object-center" alt="" />
+                    <h1 class="sm:text-2xl text-xl mt-1 mb-0 sm:mt-3 sm:mb-2 leading-none">MOSDAC</h1>
+                    <p class="sm:text-base text-sm leading-none sm:leading-5 ">Meteorological & Oceanographic Satellite
+                        Data Archival Centre</p>
                     <i id="portalIcon" class="ri-arrow-right-circle-fill text-3xl inline-block -rotate-[30deg]"></i>
                 </div>
                 <div class="portal">
                     <img src='https://www.isro.gov.in/media_isro/image/hormenu/issdc.png.webp'
-                        class="h-14 w-14 rounded-md object-cover object-center" alt="" />
-                    <h1 class="text-2xl mt-3 mb-2 leading-none">ISSDC</h1>
-                    <p class="text-base leading-5 ">Indian Space Science Data Center</p>
+                        class="h-12 w-12 sm:h-14 sm:w-14 rounded-md object-cover object-center" alt="" />
+                    <h1 class="sm:text-2xl text-xl mt-1 mb-0 sm:mt-3 sm:mb-2 leading-none">ISSDC</h1>
+                    <p class="sm:text-base text-sm leading-none sm:leading-5 ">Indian Space Science Data Center</p>
                     <i id="portalIcon" class="ri-arrow-right-circle-fill text-3xl inline-block -rotate-[30deg]"></i>
                 </div>
                 <div class="portal">
                     <img src='https://www.isro.gov.in/media_isro/image/hormenu/bhuvan.png.webp'
-                        class="h-14 w-14 rounded-md object-cover object-center" alt="" />
-                    <h1 class="text-2xl mt-3 mb-2 leading-none">Bhuvan</h1>
-                    <p class="text-base leading-5 ">Indian Geo-Platform of ISRO</p>
+                        class="h-12 w-12 sm:h-14 sm:w-14 rounded-md object-cover object-center" alt="" />
+                    <h1 class="sm:text-2xl text-xl mt-1 mb-0 sm:mt-3 sm:mb-2 leading-none">Bhuvan</h1>
+                    <p class="sm:text-base text-sm leading-none sm:leading-5 ">Indian Geo-Platform of ISRO</p>
                     <i id="portalIcon" class="ri-arrow-right-circle-fill text-3xl inline-block -rotate-[30deg]"></i>
                 </div>
                 <div class="portal">
                     <img src='https://www.isro.gov.in/media_isro/image/hormenu/isro1.png.webp'
-                        class="h-14 w-14 rounded-md object-cover object-center" alt="" />
-                    <h1 class="text-2xl mt-3 mb-2 leading-none">NDEM</h1>
-                    <p class="text-base leading-5 ">National Database for Emergency Management</p>
+                        class="h-12 w-12 sm:h-14 sm:w-14 rounded-md object-cover object-center" alt="" />
+                    <h1 class="sm:text-2xl text-xl mt-1 mb-0 sm:mt-3 sm:mb-2 leading-none">NDEM</h1>
+                    <p class="sm:text-base text-sm leading-none sm:leading-5 ">National Database for Emergency
+                        Management</p>
                     <i id="portalIcon" class="ri-arrow-right-circle-fill text-3xl inline-block -rotate-[30deg]"></i>
                 </div>
             </div>
         </div>
-        <div id="about" class='h-screen w-full relative text-zinc-700 data-scroll data-scroll-speed= -1.5'>
-            <video class='absolute h-full top-0 left-[-35%]' src="Video/bg1.mp4" type='video' autoPlay loop muted>
+
+        <div id="launcherPage" class="mt-10">
+            <div id="upper">
+                <h1 id="h1">LAUNCHERS</h1>
+            </div>
+            <div id="scroll">
+                <h1 class="Scroll_h1">Seven Marvels</h1>
+                <div class="card" id="card1">
+                    <img src="./assets/ASLV.jpg" alt="" />
+                    <div class="card-content">
+                        <h1>ASLV</h1>
+                        <h4>24th March 1987</h4>
+                        <p>ISRO's early rocket to enhance payload capacity to orbit.</p>
+                    </div>
+                </div>
+                <div class="card" id="card2">
+                    <img src="./assets/SLV3.jpg" alt="" />
+                    <div class="card-content">
+                        <h1>SSLV</h1>
+                        <h4>18th July 1980</h4>
+                        <p>India's first experimental rocket for launching satellites into orbit.
+                        </p>
+                    </div>
+                </div>
+                <div class="card" id="card3">
+                    <img src="./assets/SSLV.jpg" alt="" />
+                    <div class="card-content">
+                        <h1>SSLV</h1>
+                        <h4>August 7, 2022.</h4>
+                        <p>Cost-effective ISRO rocket for small satellite launches into low orbit.</p>
+                    </div>
+                </div>
+                <div class="card" id="card4">
+                    <img src="./assets/PSLV.jpg" alt="" />
+                    <div class="card-content">
+                        <h1>PSLV</h1>
+                        <h4>September 20, 1993</h4>
+                        <p>Reliable ISRO rocket, versatile for polar and geosynchronous satellite launches.
+                        </p>
+                    </div>
+                </div>
+                <div class="card" id="card5">
+                    <img src="./assets/GSLV.jpg" alt="" />
+                    <div class="card-content">
+                        <h1>GSLV</h1>
+                        <h4>April 18, 2001</h4>
+                        <p>ISRO's heavy-lift rocket for geostationary and higher orbit satellite launches.</p>
+                    </div>
+                </div>
+                <div class="card" id="card6">
+                    <img src="./assets/LVM3.jpg" alt="" />
+                    <div class="card-content">
+                        <h1>LVM3</h1>
+                        <h4>December 18, 2014.</h4>
+                        <p>ISRO's most powerful rocket for heavy payloads and crewed missions.</p>
+                    </div>
+                </div>
+                <div class="card" id="card7">
+                    <img src="./assets/HRLV.jpg" alt="" />
+                    <div class="card-content">
+                        <h1>HRLV</h1>
+                        <p>The well proven and reliable heavy lift launcher of ISRO
+                            under Development</p>
+                    </div>
+                </div>
+            </div>
+            <div id="lower">
+                <h1 id="h1">LAUNCHERS</h1>
+            </div>
+        </div>
+
+        <div id="about" class='h-[65vh] sm:h-screen w-full relative text-zinc-300 sm:text-zinc-700'>
+            <video class='absolute hidden sm:block h-full top-0 left-[-35%]' src="Video/bg1.mp4" type='video' autoPlay
+                loop muted>
             </video>
 
-            <div class='absolute w-full h-full flex justify-end px-10 items-center z-[1]'>
-                <div id="aboutContent" class="w-[60%]">
-                    <h1 class='text-6xl text-zinc-400 font-medium text-white'>About ISRO</h1>
-                    <h2 class="para mt-6 text-xl">Indian Space Research Organisation (ISRO) is the space agency of
-                        India. </h2>
-                    <h2 class="para text-xl">The organisation is involved in science, engineering and technology to
-                        harvest </h2>
-                    <h2 class="para  text-xl">the benefits of outer space for India and the mankind. ISRO is a major
-                    </h2>
-                    <h2 class="para text-xl">constituent of the Department of Space (DOS), Government of India. The
-                    </h2>
-                    <h2 class="para text-xl">department executes the Indian Space Programme primarily through various
-                    </h2>
-                    <h2 class="para text-xl">Centres or units within ISRO. ISRO was previously the Indian National
-                    </h2>
-                    <h2 class="para text-xl">Committee for Space Research (INCOSPAR), set up by the Government of
-                        India </h2>
-                    <h2 class="para text-xl"> in 1962, as envisioned by Dr. VikramA Sarabhai. ISRO was formed on
-                        August 15, </h2>
-                    <h2 class="para text-xl"> 1969 and superseded INCOSPAR with an expanded role to harness space
-                        technology.</h2>
-                    <h2 class="para text-xl"> DOS was set up and ISRO was brought under DOS in 1972.</h2>
-                    <button class="buttonComponent rounded text-lg px-5 py-2 text-zinc-100 mt-5">
-                        Read More <i class="ri-arrow-right-line ml-2"></i>
-                    </button>
-                </div>
+            <div id="aboutContent"
+                class="absolute w-full h-fit sm:w-[60%] top-[50%] right-0 -translate-y-[50%] px-4 sm:px-0">
+                <h1 class='sm:text-6xl text-4xl text-zinc-400 font-medium text-white'>About ISRO</h1>
+                <h2 class="para leading-none sm:leading-normal mt-2 sm:mt-6 text-xl">Indian Space Research Organisation
+                    (ISRO) is the space agency of
+                    India. </h2>
+                <h2 class="para leading-none sm:leading-normal text-xl">The organisation is involved in science,
+                    engineering and technology to
+                    harvest </h2>
+                <h2 class="para leading-none sm:leading-normal  text-xl">the benefits of outer space for India and the
+                    mankind. ISRO is a major
+                </h2>
+                <h2 class="para leading-none sm:leading-normal text-xl">constituent of the Department of Space (DOS),
+                    Government of India. The
+                </h2>
+                <h2 class="para leading-none sm:leading-normal text-xl">department executes the Indian Space Programme
+                    primarily through various
+                </h2>
+                <h2 class="para leading-none sm:leading-normal text-xl">Centres or units within ISRO. ISRO was
+                    previously the Indian National
+                </h2>
+                <h2 class="para leading-none sm:leading-normal text-xl">Committee for Space Research (INCOSPAR), set up
+                    by the Government of
+                    India </h2>
+                <h2 class="para leading-none sm:leading-normal text-xl"> in 1962, as envisioned by Dr. VikramA Sarabhai.
+                    ISRO was formed on
+                    August 15, </h2>
+                <h2 class="para leading-none sm:leading-normal text-xl"> 1969 and superseded INCOSPAR with an expanded
+                    role to harness space
+                    technology.</h2>
+                <h2 class="para leading-none sm:leading-normal text-xl"> DOS was set up and ISRO was brought under DOS
+                    in 1972.</h2>
+                <button class="buttonComponent rounded text-lg px-5 py-2 text-zinc-100 mt-5">
+                    Read More <i class="ri-arrow-right-line ml-2"></i>
+                </button>
             </div>
 
         </div>
-        <div id="footer" class="relative h-screen overflow-hidden w-full">
-            <video class='h-full w-full object-cover opacity-[40%]' src="./assets/bg2.mp4" type='video' autoPlay loop
-                muted>
-            </video>
-            <div id="cont" class="h-full w-full absolute top-0 left-0">
-                <div id="logo" class="flex justify-center items-center">
-                    <img class="h-[30vh]" src="./assets/logo.png" alt="">
-                </div>
-
-                <div id="links" class="flex items-start justify-between px-[10vw]">
-                    <div id="qlinks1" class="flex flex-col">
-                        <h1 class="text-4xl text-zinc-300 font-semibold">Quick Links</h1>
-                        <a href="#"
-                            class="hover:text-white hover:underline mt-5 text-2xl text-gray-300 duration-300">RTI</a>
-                        <a href="#" class="hover:text-white hover:underline text-2xl text-gray-300 duration-300">Contact
-                            Us</a>
-                        <a href="#" class="hover:text-white hover:underline text-2xl text-gray-300 duration-300">FAQ</a>
-                        <a href="#"
-                            class="hover:text-white hover:underline text-2xl text-gray-300 duration-300">Feedback</a>
-                    </div>
-                    <div id="qlinks2" class="flex flex-col">
-                        <h1 class="text-4xl text-zinc-300 font-semibold">Reports</h1>
-                        <a href="#"
-                            class="hover:text-white hover:underline mt-5 text-2xl text-gray-300 duration-300">Press
-                            Release</a>
-                        <a href="#"
-                            class="hover:text-white hover:underline text-2xl text-gray-300 duration-300">Publications</a>
-                        <a href="#" class="hover:text-white hover:underline text-2xl text-gray-300 duration-300">Anual
-                            Report</a>
-                        <a href="#" class="hover:text-white hover:underline text-2xl text-gray-300 duration-300">ISM
-                            Data Sheets</a>
-                        <a href="#"
-                            class="hover:text-white hover:underline text-2xl text-gray-300 duration-300">Chandrayaan-2</a>
-                    </div>
-                    <div id="qlinks3" class="flex flex-col">
-                        <h1 class="text-4xl text-zinc-300 font-semibold">Govt Portals</h1>
-                        <a href="#"
-                            class="hover:text-white hover:underline text-2xl mt-5 text-gray-300 duration-300">National
-                            Voter's
-                            Service</a>
-                        <a href="#"
-                            class="hover:text-white hover:underline text-2xl text-gray-300 duration-300">CSSTEAP</a>
-                        <a href="#" class="hover:text-white hover:underline text-2xl text-gray-300 duration-300">PIB</a>
-
-                    </div>
-                </div>
-
-                <div id="add " class="mt-10 flex justify-between  px-[10vw] ">
-                    <div id="address" class="w-[30%]">
-                        <h1 class="text-2xl text-zinc-300 font-semibold">Address</h1>
-                        <p class=" text-xl mt-3 text-gray-300 ">ISRO Headquarters, Antariksh Bhavan, New BEL Road,
-                            Bengaluru - 560 094
-                        </p>
-                        <h1 class="hover:text-white hover:underline select-none text-xl text-gray-400 duration-300">
-                            Phone: +91 80
-                            22172294 / 96</h1>
-                        <h1 class="hover:text-white hover:underline select-none text-xl text-gray-400 duration-300">
-                            Email:
-                            isropr@isro.gov.in</h1>
-                    </div>
-                    <div id="Socials" class="w-[30%] flex flex-col items-end ">
-                        <h1 class="text-2xl text-zinc-300 font-semibold ">Socials</h1>
-                        <div id="icons" class="flex gap-5 items-center mt-5 text-3xl text-gray-300">
-                            <i class="ri-facebook-fill hover:cursor-pointer duration-300"></i>
-                            <i class="ri-instagram-line hover:cursor-pointer duration-300"></i>
-                            <i class="ri-youtube-fill hover:cursor-pointer duration-300"></i>
-                            <i class="ri-mail-line hover:cursor-pointer duration-300"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="last">
-                    <h1 class=" text-xl mt-3 text-gray-300 mt-10 p-10 text-center">© Copyright 2023 ISRO. All Rights
-                        Reserved</h1>
-                </div>
-
+        <div id="footer" class="relative sm:min-h-screen h-fit bg-black sm:overflow-hidden w-full">
+            <div id="logo" class="flex justify-center items-center mt-10 mb-5">
+                <img class="h-20 sm:h-[20vh]" src="./assets/logo.png" alt="">
             </div>
+
+            <div id="links" class="flex items-start w-full justify-between px-4 sm:px-20">
+                <div id="qlinks1" class="flex flex-col text-zinc-400">
+                    <h1 class="sm:text-3xl text-2xl text-zinc-300 text-zinc-500 font-semibold">Quick Links</h1>
+                    <a href="#" class="hover:text-white mt-1 sm:mt-1 text-xl sm:text-xl duration-300">RTI</a>
+                    <a href="#" class="hover:text-white text-xl sm:text-xl duration-300">Contact
+                        Us</a>
+                    <a href="#" class="hover:text-white text-xl sm:text-xl duration-300">FAQ</a>
+                    <a href="#" class="hover:text-white text-xl sm:text-xl duration-300">Feedback</a>
+                </div>
+                <div id="qlinks2" class="hidden sm:flex flex-col text-zinc-400">
+                    <h1 class="sm:text-3xl text-2xl text-zinc-300 text-zinc-500 font-semibold">Reports</h1>
+                    <a href="#" class="hover:text-white mt-1 text-xl sm:text-xl duration-300">Press
+                        Release</a>
+                    <a href="#" class="hover:text-white text-xl sm:text-xl duration-300">Publications</a>
+                    <a href="#" class="hover:text-white text-xl sm:text-xl duration-300">Anual
+                        Report</a>
+                    <a href="#" class="hover:text-white text-xl sm:text-xl duration-300">ISM
+                        Data Sheets</a>
+                    <a href="#" class="hover:text-white text-xl sm:text-xl duration-300">Chandrayaan-2</a>
+                </div>
+                <div id="qlinks3" class="flex flex-col text-zinc-400">
+                    <h1 class="sm:text-3xl text-2xl text-zinc-300 text-zinc-500 font-semibold">Govt Portals</h1>
+                    <a href="#" class="hover:text-white text-xl sm:text-xl mt-1 sm:mt-1 duration-300">National
+                        Voter's<br>
+                        Service</a>
+                    <a href="#" class="hover:text-white text-xl sm:text-xl duration-300">CSSTEAP</a>
+                    <a href="#" class="hover:text-white text-xl sm:text-xl duration-300">PIB</a>
+                </div>
+            </div>
+
+            <div id="add " class="sm:mt-10 mt-5 flex flex-col sm:flex-row justify-between px-4 sm:px-20">
+                <div id="address" class="w-full sm:w-[30%] text-zinc-400">
+                    <h1 class="sm:text-2xl text-xl text-zinc-500 font-semibold">Address</h1>
+                    <p class="text-lg sm:text-xl mt-1 leading-none">ISRO Headquarters,
+                        Antariksh Bhavan, New BEL Road,
+                        Bengaluru - 560 094
+                    </p>
+                    <h1 class="hover:text-white select-none text-lg sm:text-xl leading-none duration-300">
+                        Phone: +91 80
+                        22172294 / 96</h1>
+                    <h1 class="hover:text-white select-none text-lg sm:text-xl leading-none duration-300">
+                        Email:
+                        isropr@isro.gov.in</h1>
+                </div>
+                <div id="Socials" class="w-full sm:w-[30%] flex flex-col text-zinc-400 mt-5 sm:mt-0 sm:items-end ">
+                    <h1 class="sm:text-2xl text-xl text-zinc-500 font-semibold ">Socials</h1>
+                    <div id="icons" class="flex gap-5 items-center mt-1 sm:mt-5 text-2xl sm:text-3xl text-zinc-500">
+                        <i class="ri-facebook-fill hover:cursor-pointer duration-300"></i>
+                        <i class="ri-instagram-line hover:cursor-pointer duration-300"></i>
+                        <i class="ri-youtube-fill hover:cursor-pointer duration-300"></i>
+                        <i class="ri-mail-line hover:cursor-pointer duration-300"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div id="last" class="mt-20 pb-5 sm:pb-0">
+                <h1 class="text-xl text-zinc-400 text-center">© Copyright 2024 ISRO. All Rights
+                    Reserved</h1>
+                <h1 class="text-center text-zinc-400">Designed by Code Crafters</h1>
+            </div>
+
         </div>
     </div>
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script> -->
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@0.2.28/bundled/lenis.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"

@@ -138,6 +138,28 @@ const hamburger = () => {
     })
 }
 
+const hamburgerForMobile = () => {
+    const hamOpen = document.querySelector('#navbar #ham-open');
+    const hamClose = document.querySelector('#hamburger #ham-close');
+    const hamburger = document.querySelector('#hamburger');
+
+    hamOpen.addEventListener('click', () => {
+        gsap.to(hamburger, {
+            display: 'block',
+            right: 0,
+            duration: 0.6
+        })
+    })
+    hamClose.addEventListener('click', () => {
+        gsap.to(hamburger, {
+            display: 'block',
+            right: '-100%',
+            duration: 0.6
+
+        })
+    })
+}
+
 const aboutUs = () => {
     var para = document.querySelectorAll("#aboutContent h2");
     para.forEach((elem) => {
@@ -154,20 +176,149 @@ const aboutUs = () => {
         color: "rgb(194, 194, 194)",
         stagger: 0.1,
         scrollTrigger: {
-            trigger: ".para",
-            start: "top 100%",
+            trigger: ".para span",
+            start: "top 90%",
             end: "top 40%",
             scrub: 2
         }
     })
-
-
 }
 
-hamburger();
+const launcherPage = () => {
+    var upper = document.querySelector("#launcherPage #upper");
+    var lower = document.querySelector("#launcherPage #lower");
+    var card = document.querySelectorAll(".card");
+
+    var tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#launcherPage",
+            // scroller: "body",
+            // markers: true,
+            start: "top top",
+            end: "top -200%",
+            scrub: true,
+            pin: true,
+        },
+    });
+
+    tl.to(upper, {
+        top: "-52%",
+        delay: .1,
+        ease: "power5.in",
+    }, "a")
+        .to(lower, {
+            top: "100%",
+            delay: .1,
+            ease: "power5.in",
+        }, "a");
+
+    tl.to("#scroll", {
+        x: "-50%",
+        ease: "power1.inOut",
+        scrollTrigger: {
+            trigger: "#launcherPage",
+            start: "top -0.1%",
+            end: "top -300%",
+            delay: .1,
+            scrub: true,
+            pin: true,
+            // markers: true
+        }
+    });
+
+    gsap.from("#card1", {
+        y: "120%",
+        ease: "power5.inOut",
+        scrollTrigger: {
+            trigger: "#card1",
+            start: "top -70%",
+            end: "top -120%",
+            scrub: true,
+            // markers: true,
+        }
+    });
+    gsap.from("#card2", {
+        y: "-120%",
+        ease: "power5.inOut",
+        scrollTrigger: {
+            trigger: "#card1",
+            start: "top -110%",
+            end: "top -160%",
+            scrub: true,
+            // markers: true,
+        }
+    });
+    gsap.from("#card3", {
+        y: "120%",
+        ease: "power5.inOut",
+        scrollTrigger: {
+            trigger: "#card1",
+            start: "top -170%",
+            end: "top -230%",
+            scrub: true,
+            // markers: true,
+        }
+    });
+    gsap.from("#card4", {
+        y: "-120%",
+        ease: "power5.inOut",
+        scrollTrigger: {
+            trigger: "#card1",
+            start: "top -220%",
+            end: "top -270%",
+            scrub: true,
+            // markers: true,
+        }
+    });
+    gsap.from("#card5", {
+        y: "120%",
+        ease: "power5.inOut",
+        scrollTrigger: {
+            trigger: "#card1",
+            start: "top -260%",
+            end: "top -310%",
+            scrub: true,
+            // markers: true,
+        }
+    });
+    gsap.from("#card6", {
+        y: "-120%",
+        ease: "power5.inOut",
+        scrollTrigger: {
+            trigger: "#card1",
+            start: "top -300%",
+            end: "top -350%",
+            scrub: true,
+            // markers: true,
+        }
+    });
+    gsap.from("#card7", {
+        y: "120%",
+        ease: "power5.inOut",
+        scrollTrigger: {
+            trigger: "#card1",
+            start: "top -340%",
+            end: "top -390%",
+            scrub: true,
+            // markers: true,
+        }
+    });
+
+
+};
+
+
 lenisJs();
-landingPageChange();
-recentLaunches();
-sheryAnimation();
 swiper();
-aboutUs();
+
+if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    landingPageChange();
+    recentLaunches();
+    sheryAnimation();
+    launcherPage();
+    aboutUs();
+    hamburger();
+} else {
+    hamburgerForMobile();
+
+}
