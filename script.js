@@ -316,11 +316,22 @@ const handleNavbar = () => {
     })
 }
 
+const mouseOnLandingPage = () => {
+    const home = document.querySelector('#home');
+    const mouse = document.querySelector('#mouseClickFollower');
+    home.addEventListener('mousemove', (dets) => {
+        gsap.to(mouse, {
+            x: dets.x,
+            y: dets.y
+        })
+    })
+}
 
 lenisJs();
 swiper();
 
 if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    mouseOnLandingPage();
     handleNavbar();
     landingPageChange();
     recentLaunches();

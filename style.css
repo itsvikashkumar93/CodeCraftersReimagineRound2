@@ -47,6 +47,11 @@ body {
     backdrop-filter: blur(10px);
 }
 
+#mouseClickFollower {
+    background-color: #ffffff00;
+    backdrop-filter: blur(10px);
+}
+
 #hamburger {
     background-color: #ffffff25;
     backdrop-filter: blur(10px);
