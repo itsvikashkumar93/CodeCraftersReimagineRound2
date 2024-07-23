@@ -306,7 +306,7 @@ const launcherPage = () => {
 
 const handleNavbar = () => {
     gsap.to('#navbar', {
-        y: -60,
+        y: -70,
         scrollTrigger: {
             trigger: '#home',
             start: 'bottom 100%',
@@ -326,6 +326,41 @@ const mouseOnLandingPage = () => {
         })
     })
 }
+function pg4() {
+    const width = window.innerWidth;
+    document.addEventListener('DOMContentLoaded', function () {
+        const tabs = document.querySelectorAll('.tab');
+        const sections = document.querySelectorAll('.content-section');
+        const scroller = document.querySelector('.scroller');
+
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', function () {
+                tabs.forEach(tab => tab.classList.remove('active'));
+                this.classList.add('active');
+
+                sections.forEach(section => section.classList.remove('active'));
+                const contentId = this.getAttribute('data-content');
+                document.getElementById(contentId).classList.add('active');
+
+                if (width >= 1000) {
+                    scroller.style.top = `${index * 3.2}vw`;
+                    scroller.style.height = `${tabs[index].offsetHeight}px`;
+                } else {
+                    scroller.style.top = `${index * 3.5}vh`;
+                    scroller.style.height = `${tabs[index].offsetHeight}px`;
+                }
+            });
+        });
+
+        tabs[0].classList.add('active');
+        sections[0].classList.add('active');
+        scroller.style.top = '0';
+        scroller.style.height = `${tabs[0].offsetHeight}px`;
+    });
+}
+
+pg4();
+
 
 lenisJs();
 swiper();

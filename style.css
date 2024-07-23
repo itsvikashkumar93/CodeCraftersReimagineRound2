@@ -123,9 +123,12 @@ body {
     transition: 0.4s;
 }
 
-.portal:nth-child(2)::before,.portal:nth-child(4)::before, .portal:nth-child(6)::before, .portal:nth-child(8)::before{
+.portal:nth-child(2)::before,
+.portal:nth-child(4)::before,
+.portal:nth-child(6)::before,
+.portal:nth-child(8)::before {
     background: linear-gradient(to right, rgb(43, 44, 39), rgb(46, 144, 169));
-} 
+}
 
 .portal:hover::before {
     left: 0;
@@ -143,76 +146,112 @@ body {
     right: 2%;
 }
 
+#page4 {
+    height: 100vh;
+    width: 100%;
+}
 
-
-.swiper-slide {
-    position: relative;
+.container {
     width: 100%;
     height: 100%;
-    text-align: center;
-    /* background: rgb(83, 83, 83); */
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
+    gap: 20vw;
+}
+
+.sidebar {
+    color: #fff;
+    width: 15%;
+    height: fit-content;
+    position: relative;
+    display: flex;
     flex-direction: column;
-    gap: 0.6vw;
 }
 
-.swiper-slide h1 {
-    font-size: 40vw;
-    position: absolute;
-    text-align: center;
-    top: -10%;
-    font-family: Teko;
-    background: linear-gradient(to bottom, #908f8f 1%, transparent 99%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    letter-spacing: 20px;
+.tab {
+    cursor: pointer;
+    margin-left: 2vw;
+    position: relative;
+    transition: color 0.3s;
+    color: #504A45;
+    font-size: 3.5vw;
+    line-height: 3.2vw;
+    width: 7.2vw;
+    user-select: none;
 }
 
-.swiper-slide h4 {
-    color: #F47115;
-    text-decoration: none;
-    text-transform: none;
-    font-size: 2.5vw;
-    z-index: 50;
-    letter-spacing: 2px;
+.tab:hover {
+    color: #fff;
+    border-bottom: 3px solid #fff;
 }
 
-.swiper-slide p {
-    font-size: 1.5vw;
-    line-height: 2vw;
-    width: 60%;
+.tab.active {
     color: white;
 }
 
-.swiper-slide img {
-    width: 30%;
-    height: 40%;
+#scroller_parent {
+    background-color: #504A45;
+    height: 100%;
+    position: absolute;
+    left: 10;
+    transition: top 0.3s, height 0.3s;
+    width: 2px;
+}
+
+.scroller {
+    background-color: #FE330A;
+    height: 2vw;
+    position: absolute;
+    left: 10;
+    top: 0;
+    transition: top 0.3s, height 0.3s;
+    width: 2px;
+}
+
+.content {
+    height: 100%;
+    width: 50%;
+    position: relative;
+}
+
+.content-section {
+    display: none;
+    height: 100%;
+    width: 100%;
+    padding-top: 10%;
+}
+
+.content-section.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-section img {
+    height: 60%;
+    width: 90%;
     object-fit: cover;
-    object-position: top;
-    z-index: 50;
     border-radius: 10px;
-    filter: grayscale(100%);
 }
 
-
-.swiper-button-next,
-.swiper-button-prev {
+.content-section .date {
+    font-size: 2vw;
+    line-height: 2vw;
     color: #fff;
+    margin-top: 4vh;
+    margin-bottom: 2vh;
 }
 
-.swiper-pagination-bullet {
-    background-color: #F47115;
-    width: 10px;
-    height: 10px;
+.content-paragraph {
+    color: #fff;
+    text-align: center;
+    font-size: 1.5vw;
+    line-height: 1.5vw;
+    width: 80%;
 }
 
-.swiper-pagination-bullet-active {
-    background-color: #F47115;
-    width: 12px;
-    height: 12px;
-}
 
 #aboutContent h1 {
     font-family: Equinox;
@@ -288,16 +327,17 @@ body {
     opacity: 0;
 }
 
-.card-content h1{
+.card-content h1 {
     font-size: 1.5vw;
-    font-weight: 600;line-height: 1.5vw;
+    font-weight: 600;
+    line-height: 1.5vw;
 }
 
-.card-content h4{
+.card-content h4 {
     font-size: 1vw;
 }
 
-.card-content p{
+.card-content p {
     font-size: 1vw;
     line-height: 1vw;
 }
@@ -383,6 +423,44 @@ body {
 #launcherPage #lower h1 {
     font-size: 15vw;
     top: -0.5%;
+}
+
+#marquee {
+    height: fit-content;
+    width: 100%;
+    background-color: #151515;
+    position: relative;
+}
+
+.marquee-elem {
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+
+.marquee-elem h1 {
+    list-style-type: disc;
+    font-size: 2.5vw;
+    line-height: 3vw;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: inline-block;
+    margin-right: 0.3vw;
+    animation-name: moving;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes moving {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100% - 4px - 0.3vw));
+    }
 }
 
 
