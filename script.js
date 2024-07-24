@@ -16,48 +16,38 @@ const loaderAnimation = () => {
     var tl = gsap.timeline()
     tl.to("#loader h1:nth-child(1)", {
         opacity: 1,
-        duration: 0.1,
-        delay: .2
+        duration: 0.4,
+        delay: .4
     })
     tl.to("#loader h1:nth-child(1)", {
         opacity: 0,
-        duration: 0.1,
-        delay: 1
+        duration: 0.2,
+        delay: .4
     })
     tl.to("#loader h1:nth-child(2)", {
         opacity: 1,
-        duration: 0.1,
-        delay: .2
+        duration: 0.4,
+        delay: .4
     })
     tl.to("#loader h1:nth-child(2)", {
         opacity: 0,
-        duration: 0.1,
-        delay: 1
+        duration: 0.2,
+        delay: .4
     })
     tl.to("#loader h1:nth-child(3)", {
         opacity: 1,
-        duration: 0.1,
-        delay: .2
+        duration: 0.4,
+        delay: .4
     })
     tl.to("#loader h1:nth-child(3)", {
         opacity: 0,
-        duration: 0.1,
-        delay: 1
-    });
-    tl.to("#loader video", {
-        opacity: 1,
-        duration: 0.1,
-        delay: .2
-    })
-    tl.to("#loader video", {
-        opacity: 0,
-        duration: 0.1,
-        delay: 2
+        duration: 0.2,
+        delay: .4
     })
     tl.to("#loader", {
         y: "-100%",
-        duration: .4,
-        delay: 0
+        duration: .7,
+        delay: 0.5
     })
 }
 
@@ -267,8 +257,15 @@ const launcherPage = () => {
             ease: "power5.in",
         }, "a");
 
+
+    tl.to("#scroll", {
+        scale: 1,
+        ease: "power1.inOut",
+    }, "a");
+
     tl.to("#scroll", {
         x: "-50%",
+        scale: 1,
         ease: "power1.inOut",
         scrollTrigger: {
             trigger: "#launcherPage",
@@ -278,7 +275,7 @@ const launcherPage = () => {
             scrub: true,
             pin: true,
         }
-    });
+    }, "a");
 
     gsap.from("#card1", {
         y: "120%",
