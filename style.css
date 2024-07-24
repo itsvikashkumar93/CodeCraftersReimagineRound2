@@ -48,7 +48,10 @@ body {
     position: fixed;
     height: 100vh;
     width: 100%;
-    background-color: #17181c;
+    /* background-color: #17181c; */
+    background-image: url('./assets/stars.jpg');
+    background-size: cover;
+    background-position: center;
     z-index: 99999;
     top: 0;
     left: 0;
@@ -68,6 +71,12 @@ body {
     opacity: 0;
     z-index: 110;
     transition: all ease 0.3s;
+}
+
+#loader h5 {
+    background: linear-gradient(to right, rgb(255, 123, 0), orangered);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 #navbar {
@@ -321,7 +330,7 @@ body {
     width: 550vw;
     height: 100vh;
     scale: 0.6;
-    transform-origin: center left ;
+    transform-origin: center left;
     background-color: black;
 }
 

@@ -13,6 +13,20 @@ const lenisJs = () => {
 }
 
 const loaderAnimation = () => {
+    gsap.from("#loader h5", {
+        opacity: 0,
+        onStart: function () {
+            var h5Timer = document.querySelector("#loader h5 span");
+            var count = 1;
+            var int = setInterval(function () {
+                h5Timer.innerHTML = count;
+                if (count === 100) {
+                    clearInterval(int);
+                }
+                count++;
+            }, 40)
+        }
+    })
     var tl = gsap.timeline()
     tl.to("#loader h1:nth-child(1)", {
         opacity: 1,
@@ -46,8 +60,12 @@ const loaderAnimation = () => {
     })
     tl.to("#loader", {
         y: "-100%",
-        duration: .7,
+        ease: 'power4.easeInOut',
+        duration: 1,
         delay: 0.5
+    })
+    tl.to('#loader', {
+        display: 'none'
     })
 }
 
