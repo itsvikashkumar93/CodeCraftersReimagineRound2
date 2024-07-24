@@ -509,27 +509,13 @@ body {
 
 
 @media (max-width: 600px) {
-    .swiper-slide h1 {
-        font-size: 50vw;
-        top: 50%;
-        transform: translateY(-50%);
+    #loader h1 {
+        font-size: 8vw;
     }
 
-    .swiper-slide h4 {
-        font-size: 5.5vw;
+    #loader h5 {
+        font-size: 7vw;
     }
-
-    .swiper-slide p {
-        font-size: 4.5vw;
-        line-height: 4vw;
-        width: 90%;
-    }
-
-    .swiper-slide img {
-        width: 60%;
-        height: 30%;
-    }
-
 
     .portal {
         height: 30vw;
@@ -540,5 +526,56 @@ body {
 
     #portalIcon {
         right: -20%;
+    }
+
+    #page4 {
+        height: 70vh;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 10vw;
+    }
+
+    .sidebar {
+        padding-top: 2.5vw;
+        width: 80%;
+    }
+
+    .tab {
+        font-size: 5vw;
+        line-height: 5vw;
+        width: 100vw;
+    }
+
+    #scroller_parent {
+        height: 96%;
+    }
+
+    .scroller {
+        height: 2vw;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .content-section {
+        padding-top: 0%;
+    }
+
+    .content-section .date {
+        font-size: 4vw;
+        margin-top: 2vh;
+    }
+
+    .content-paragraph {
+        font-size: 4vw;
+        line-height: 4vw;
+        width: 90%;
+    }
+
+    #launcherPage {
+        display: none;
     }
 }

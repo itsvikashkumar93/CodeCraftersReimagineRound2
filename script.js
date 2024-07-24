@@ -424,7 +424,7 @@ function pg4() {
                     scroller.style.top = `${index * 3.5}vw`;
                     scroller.style.height = `${tabs[index].offsetHeight}px`;
                 } else {
-                    scroller.style.top = `${index * 3.5}vh`;
+                    scroller.style.top = `${index * 5}vw`;
                     scroller.style.height = `${tabs[index].offsetHeight}px`;
                 }
             });
@@ -438,8 +438,6 @@ function pg4() {
 }
 
 pg4();
-
-
 lenisJs();
 loaderAnimation();
 swiper();
