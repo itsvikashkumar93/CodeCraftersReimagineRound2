@@ -209,10 +209,17 @@ const hamburgerForMobile = () => {
     const hamburger = document.querySelector('#hamburger');
 
     hamOpen.addEventListener('click', () => {
-        gsap.to(hamburger, {
-            display: 'block',
+        var tl = gsap.timeline();
+        tl.to("#hamburger", {
+            display: "block",
             right: 0,
             duration: 0.6
+        })
+        tl.from('#hamburger h1 span', {
+            y: 40,
+            rotate: 50,
+            duration: 0.5,
+            stagger: 0.2
         })
     })
     hamClose.addEventListener('click', () => {
@@ -220,7 +227,6 @@ const hamburgerForMobile = () => {
             display: 'block',
             right: '-100%',
             duration: 0.6
-
         })
     })
 }
