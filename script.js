@@ -11,6 +11,56 @@ const lenisJs = () => {
     requestAnimationFrame(raf);
 
 }
+
+const loaderAnimation = () => {
+    var tl = gsap.timeline()
+    tl.to("#loader h1:nth-child(1)", {
+        opacity: 1,
+        duration: 0.1,
+        delay: .2
+    })
+    tl.to("#loader h1:nth-child(1)", {
+        opacity: 0,
+        duration: 0.1,
+        delay: 1
+    })
+    tl.to("#loader h1:nth-child(2)", {
+        opacity: 1,
+        duration: 0.1,
+        delay: .2
+    })
+    tl.to("#loader h1:nth-child(2)", {
+        opacity: 0,
+        duration: 0.1,
+        delay: 1
+    })
+    tl.to("#loader h1:nth-child(3)", {
+        opacity: 1,
+        duration: 0.1,
+        delay: .2
+    })
+    tl.to("#loader h1:nth-child(3)", {
+        opacity: 0,
+        duration: 0.1,
+        delay: 1
+    });
+    tl.to("#loader video", {
+        opacity: 1,
+        duration: 0.1,
+        delay: .2
+    })
+    tl.to("#loader video", {
+        opacity: 0,
+        duration: 0.1,
+        delay: 2
+    })
+    tl.to("#loader", {
+        y: "-100%",
+        duration: .4,
+        delay: 0
+    })
+}
+
 const landingPageChange = () => {
     var elems = document.querySelectorAll('.elem')
 
@@ -122,10 +172,17 @@ const hamburger = () => {
     const hamburger = document.querySelector('#hamburger');
 
     hamOpen.addEventListener('click', () => {
-        gsap.to(hamburger, {
-            display: 'block',
+        var tl = gsap.timeline();
+        tl.to("#hamburger", {
+            display: "block",
             right: 0,
             duration: 0.6
+        })
+        tl.from('#hamburger h1 span', {
+            y: 40,
+            rotate: 50,
+            duration: 0.5,
+            stagger: 0.2
         })
     })
     hamClose.addEventListener('click', () => {
@@ -363,6 +420,7 @@ pg4();
 
 
 lenisJs();
+loaderAnimation();
 swiper();
 
 if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
