@@ -28,42 +28,11 @@ const loaderAnimation = () => {
         }
     })
     var tl = gsap.timeline()
-    // tl.to("#loader h1:nth-child(1)", {
-    //     opacity: 1,
-    //     duration: 0.4,
-    //     delay: .4
-    // })
-    // tl.to("#loader h1:nth-child(1)", {
-    //     opacity: 0,
-    //     duration: 0.2,
-    //     delay: .4
-    // })
-    // tl.to("#loader h1:nth-child(2)", {
-    //     opacity: 1,
-    //     duration: 0.4,
-    //     delay: .4
-    // })
-    // tl.to("#loader h1:nth-child(2)", {
-    //     opacity: 0,
-    //     duration: 0.2,
-    //     delay: .4
-    // })
-    // tl.to("#loader h1:nth-child(3)", {
-    //     opacity: 1,
-    //     duration: 0.4,
-    //     delay: .4
-    // })
-    // tl.to("#loader h1:nth-child(3)", {
-    //     opacity: 0,
-    //     duration: 0.2,
-    //     delay: .4
-    // })
     tl.to("#loader", {
         y: "-100%",
-        ease: 'power4.easeInOut',
+        ease: 'power2.in',
         duration: 1,
         delay: 5
-        // delay: 0.5
     })
     tl.to('#loader', {
         display: 'none'
@@ -144,34 +113,11 @@ const sheryAnimation = () => {
     Shery.imageEffect("#back", {
         style: 2,
         gooey: true,
-        // debug: true,
         config: { "resolutionXY": { "value": 100 }, "distortion": { "value": true }, "mode": { "value": -3 }, "mousemove": { "value": 0 }, "modeA": { "value": 1 }, "modeN": { "value": 0 }, "speed": { "value": 1, "range": [-500, 500], "rangep": [-10, 10] }, "frequency": { "value": 800, "range": [-800, 800], "rangep": [-50, 50] }, "angle": { "value": 0.5, "range": [0, 3.141592653589793] }, "waveFactor": { "value": 3, "range": [-3, 3] }, "color": { "value": 16777215 }, "pixelStrength": { "value": 3, "range": [-20, 100], "rangep": [-20, 20] }, "quality": { "value": 0, "range": [0, 10] }, "contrast": { "value": 1, "range": [-25, 25] }, "brightness": { "value": 1, "range": [-1, 25] }, "colorExposer": { "value": 0.18, "range": [-5, 5] }, "strength": { "value": 0.2, "range": [-40, 40], "rangep": [-5, 5] }, "exposer": { "value": 8, "range": [-100, 100] }, "zindex": { "value": "9", "range": [-9999999, 9999999] }, "aspect": { "value": 2.0469082489694217 }, "ignoreShapeAspect": { "value": true }, "shapePosition": { "value": { "x": 0, "y": 0 } }, "shapeScale": { "value": { "x": 0.5, "y": 0.5 } }, "shapeEdgeSoftness": { "value": 0, "range": [0, 0.5] }, "shapeRadius": { "value": 0, "range": [0, 2] }, "currentScroll": { "value": 0 }, "scrollLerp": { "value": 0.07 }, "gooey": { "value": true }, "infiniteGooey": { "value": true }, "growSize": { "value": 5.6, "range": [1, 15] }, "durationOut": { "value": 1, "range": [0.1, 5] }, "durationIn": { "value": 1.3, "range": [0.1, 5] }, "displaceAmount": { "value": 0.5 }, "masker": { "value": true }, "maskVal": { "value": 1, "range": [1, 5] }, "scrollType": { "value": 0 }, "geoVertex": { "range": [1, 64], "value": 1 }, "noEffectGooey": { "value": true }, "onMouse": { "value": 1 }, "noise_speed": { "value": 1.07, "range": [0, 10] }, "metaball": { "value": 0.13, "range": [0, 2], "_gsap": { "id": 13 } }, "discard_threshold": { "value": 0.5, "range": [0, 1] }, "antialias_threshold": { "value": 0, "range": [0, 0.1] }, "noise_height": { "value": 0.5, "range": [0, 2] }, "noise_scale": { "value": 26.72, "range": [0, 100] }, "uFrequencyX": { "value": 0, "range": [0, 100] }, "uFrequencyY": { "value": 0, "range": [0, 100] }, "uFrequencyZ": { "value": 0, "range": [0, 100] }, "a": { "value": 0.69, "range": [0, 30] }, "b": { "value": -0.97, "range": [-1, 1] } }
     });
 
     Shery.mouseFollower();
     Shery.makeMagnet('.makeMagnet');
-
-}
-
-const swiper = () => {
-    var swiper = new Swiper(".mySwiper", {
-        loop: true,
-        pagination: {
-            el: ".swiper-pagination",
-            dynamicBullets: true,
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        mousewheel: {
-            forceToAxis: true,
-            releaseOnEdges: true,
-            sensitivity: 0,
-            thresholdDelta: 30,
-            thresholdTime: 0.1,
-        },
-    });
 
 }
 
@@ -297,7 +243,7 @@ const launcherPage = () => {
             start: "top -0.1%",
             end: "top -300%",
             delay: .1,
-            scrub: true,
+            scrub: 2,
             pin: true,
         }
     }, "a");
@@ -309,8 +255,7 @@ const launcherPage = () => {
             trigger: "#card1",
             start: "top -70%",
             end: "top -120%",
-            scrub: true,
-            // markers: true,
+            scrub: 2,
         }
     });
     gsap.from("#card2", {
@@ -320,8 +265,7 @@ const launcherPage = () => {
             trigger: "#card1",
             start: "top -110%",
             end: "top -160%",
-            scrub: true,
-            // markers: true,
+            scrub: 2,
         }
     });
     gsap.from("#card3", {
@@ -331,8 +275,7 @@ const launcherPage = () => {
             trigger: "#card1",
             start: "top -170%",
             end: "top -230%",
-            scrub: true,
-            // markers: true,
+            scrub: 2,
         }
     });
     gsap.from("#card4", {
@@ -342,8 +285,7 @@ const launcherPage = () => {
             trigger: "#card1",
             start: "top -220%",
             end: "top -270%",
-            scrub: true,
-            // markers: true,
+            scrub: 2,
         }
     });
     gsap.from("#card5", {
@@ -353,8 +295,7 @@ const launcherPage = () => {
             trigger: "#card1",
             start: "top -260%",
             end: "top -310%",
-            scrub: true,
-            // markers: true,
+            scrub: 2,
         }
     });
     gsap.from("#card6", {
@@ -364,8 +305,7 @@ const launcherPage = () => {
             trigger: "#card1",
             start: "top -300%",
             end: "top -350%",
-            scrub: true,
-            // markers: true,
+            scrub: 2,
         }
     });
     gsap.from("#card7", {
@@ -375,8 +315,7 @@ const launcherPage = () => {
             trigger: "#card1",
             start: "top -340%",
             end: "top -390%",
-            scrub: true,
-            // markers: true,
+            scrub: 2,
         }
     });
 
@@ -441,7 +380,6 @@ function pg4() {
 pg4();
 lenisJs();
 loaderAnimation();
-swiper();
 
 if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     mouseOnLandingPage();
