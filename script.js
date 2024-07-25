@@ -24,7 +24,7 @@ const loaderAnimation = () => {
                     clearInterval(int);
                 }
                 count++;
-            }, 40)
+            }, 30)
         }
     })
     var tl = gsap.timeline()
@@ -62,7 +62,7 @@ const loaderAnimation = () => {
         y: "-100%",
         ease: 'power4.easeInOut',
         duration: 1,
-        delay: 5.5
+        delay: 5
         // delay: 0.5
     })
     tl.to('#loader', {
